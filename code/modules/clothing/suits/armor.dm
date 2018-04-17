@@ -108,6 +108,7 @@
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 30, bomb = 30, bio = 0, rad = 0)
 	siemens_coefficient = 0.6
 
+/*
 /obj/item/clothing/suit/armor/tactical
 	name = "tactical armor"
 	desc = "A suit of armor most often used by Special Weapons and Tactics squads. Includes padded vest with pockets along with shoulder and kneeguards."
@@ -118,6 +119,7 @@
 	slowdown = 1
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 40, bomb = 40, bio = 0, rad = 0)
 	siemens_coefficient = 0.7
+*/
 
 /obj/item/clothing/suit/armor/swat
 	name = "swat suit"
@@ -486,7 +488,7 @@
 	siemens_coefficient = 1
 
 //Modular plate carriers
-//obj/item/clothing/suit/armor/pcarrier
+/obj/item/clothing/suit/armor/pcarrier
 	name = "plate carrier"
 	desc = "A lightweight black plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
 	icon = 'icons/obj/clothing/modular_armor.dmi'

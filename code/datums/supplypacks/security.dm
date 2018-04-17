@@ -13,20 +13,14 @@
 	access = access_security
 
 /datum/supply_packs/randomised/security/armor
-	name = "Armor - Security armor"
+	name = "Armor - Security plate carriers"
 	num_contained = 5
 	contains = list(
-			/obj/item/clothing/suit/storage/vest,
-			/obj/item/clothing/suit/storage/vest/officer,
-			/obj/item/clothing/suit/storage/vest/warden,
-			/obj/item/clothing/suit/storage/vest/hos,
-			/obj/item/clothing/suit/storage/vest/pcrc,
-			/obj/item/clothing/suit/storage/vest/detective,
-			/obj/item/clothing/suit/storage/vest/heavy,
-			/obj/item/clothing/suit/storage/vest/heavy/officer,
-			/obj/item/clothing/suit/storage/vest/heavy/warden,
-			/obj/item/clothing/suit/storage/vest/heavy/hos,
-			/obj/item/clothing/suit/storage/vest/heavy/pcrc
+			/obj/item/clothing/suit/armor/pcarrier/security,
+			/obj/item/clothing/suit/armor/pcarrier/security/warden,
+			/obj/item/clothing/suit/armor/pcarrier/security/hos,
+			/obj/item/clothing/suit/armor/pcarrier/security/detective/csi,
+			/obj/item/clothing/suit/armor/pcarrier/security/detective
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/gear
@@ -60,6 +54,7 @@
 	containername = "Riot armor crate"
 	access = access_armory
 
+/*
 /datum/supply_packs/security/ablative_armor
 	name = "Armor - Ablative"
 	contains = list(
@@ -98,6 +93,7 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Combat armor crate"
 	access = access_armory
+*/
 
 /datum/supply_packs/security/tactical
 	name = "Armor - Tactical"
@@ -107,21 +103,21 @@
 	access = access_armory
 	contains = list(
 			/obj/item/clothing/under/tactical,
-			/obj/item/clothing/suit/armor/tactical,
-			/obj/item/clothing/head/helmet/tactical,
+			/obj/item/clothing/suit/armor/pcarrier/swat,
+			/obj/item/clothing/head/helmet/swat,
 			/obj/item/clothing/mask/balaclava/tactical,
 			/obj/item/clothing/glasses/sunglasses/sechud/tactical,
 			/obj/item/weapon/storage/belt/security/tactical,
-			/obj/item/clothing/shoes/boots/jackboots,
-			/obj/item/clothing/gloves/black,
+			/obj/item/clothing/shoes/boots/tactical,
+			/obj/item/clothing/gloves/tactical,
 			/obj/item/clothing/under/tactical,
-			/obj/item/clothing/suit/armor/tactical,
-			/obj/item/clothing/head/helmet/tactical,
+			/obj/item/clothing/suit/armor/pcarrier/swat,
+			/obj/item/clothing/head/helmet/swat,
 			/obj/item/clothing/mask/balaclava/tactical,
 			/obj/item/clothing/glasses/sunglasses/sechud/tactical,
 			/obj/item/weapon/storage/belt/security/tactical,
-			/obj/item/clothing/shoes/boots/jackboots,
-			/obj/item/clothing/gloves/black
+			/obj/item/clothing/shoes/boots/tactical,
+			/obj/item/clothing/gloves/tactical
 			)
 
 /datum/supply_packs/security/securitybarriers
@@ -169,7 +165,7 @@
 	name = "Forensic - Investigation equipment"
 	contains = list(
 			/obj/item/weapon/storage/box/evidence = 2,
-			/obj/item/clothing/suit/storage/vest/detective,
+			/obj/item/clothing/suit/armor/pcarrier/security/detective,
 			/obj/item/weapon/cartridge/detective,
 			/obj/item/device/radio/headset/headset_sec,
 			/obj/item/taperoll/police,
@@ -217,7 +213,7 @@
 /datum/supply_packs/security/officergear
 	name = "Gear - Officer equipment"
 	contains = list(
-			/obj/item/clothing/suit/storage/vest/officer,
+			/obj/item/clothing/suit/armor/pcarrier/security,
 			/obj/item/clothing/head/helmet,
 			/obj/item/weapon/cartridge/security,
 			/obj/item/clothing/accessory/badge/holo,
@@ -247,7 +243,7 @@
 /datum/supply_packs/security/wardengear
 	name = "Gear - Warden equipment"
 	contains = list(
-			/obj/item/clothing/suit/storage/vest/warden,
+			/obj/item/clothing/suit/armor/pcarrier/security/warden,
 			/obj/item/clothing/under/rank/warden,
 			/obj/item/clothing/under/rank/warden/corp,
 			/obj/item/clothing/suit/storage/vest/wardencoat,
@@ -276,7 +272,7 @@
 	name = "Gear - Head of security equipment"
 	contains = list(
 			/obj/item/clothing/head/helmet/security/hos,
-			/obj/item/clothing/suit/storage/vest/hos,
+			/obj/item/clothing/suit/armor/pcarrier/security/hos,
 			/obj/item/clothing/under/rank/head_of_security/corp,
 			/obj/item/clothing/suit/storage/vest/hoscoat,
 			/obj/item/clothing/head/helmet/security/dermal,

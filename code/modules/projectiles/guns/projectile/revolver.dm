@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/projectile/revolver
-	name = "revolver"
-	desc = "The Lumoco Arms HE Colt is a choice revolver for when you absolutely, positively need to put a hole in the other guy. Uses .357 rounds."
+	name = "M-30 revolver"
+	desc = "The Frontier Armament Company's M30 is a choice revolver for when you absolutely, positively need to put a hole in the other guy. Uses .357 rounds."
 	icon_state = "revolver"
 	item_state = "revolver"
 	caliber = ".357"
@@ -36,14 +36,14 @@
 	return ..()
 
 /obj/item/weapon/gun/projectile/revolver/mateba
-	name = "mateba"
+	name = "Mateba Autorevolver"
 	desc = "This unique looking handgun is named after an Italian company famous for the manufacture of these revolvers, and pasta kneading machines. Uses .357 rounds." // Yes I'm serious. -Spades
 	icon_state = "mateba"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 
 /obj/item/weapon/gun/projectile/revolver/detective
-	name = "revolver"
-	desc = "A cheap Martian knock-off of a Smith & Wesson Model 10. Uses .38-Special rounds."
+	name = "S&W Model 10"
+	desc = "A cheap Olympia Foundry reproduction of a Smith & Wesson Model 10. Uses .38-Special rounds."
 	icon_state = "detective"
 	caliber = ".38"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)

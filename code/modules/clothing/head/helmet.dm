@@ -103,26 +103,6 @@
 	siemens_coefficient = 0.7
 	valid_accessory_slots = null
 
-/obj/item/clothing/head/helmet/combat
-	name = "combat helmet"
-	desc = "It's a general purpose combat helmet, designed to protect against typical dangers to your head."
-	icon_state = "helmet_combat"
-	item_state_slots = list(slot_r_hand_str = "helmet", slot_l_hand_str = "helmet")
-	armor = list(melee = 50, bullet = 50, laser = 50 ,energy = 30, bomb = 30, bio = 0, rad = 0)
-	flags_inv = HIDEEARS
-	siemens_coefficient = 0.6
-	valid_accessory_slots = null
-
-/obj/item/clothing/head/helmet/swat
-	name = "\improper SWAT helmet"
-	desc = "They're often used by highly trained SWAT Officers."
-	icon_state = "swat"
-	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
-	flags_inv = HIDEEARS|HIDEEYES
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
-	siemens_coefficient = 0.5
-
 /obj/item/clothing/head/helmet/alien
 	name = "alien helmet"
 	desc = "It's quite larger than your head, but it might still protect it."
@@ -152,21 +132,6 @@
 	flags = BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
 	siemens_coefficient = 1
-	valid_accessory_slots = null
-
-/obj/item/clothing/head/helmet/tactical
-	name = "tactical helmet"
-	desc = "An armored helmet capable of being fitted with a multitude of attachments."
-	icon_state = "swathelm"
-	item_state_slots = list(slot_r_hand_str = "swat", slot_l_hand_str = "swat")
-	sprite_sheets = list(
-		SPECIES_TAJ = 'icons/mob/species/tajaran/helmet.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/helmet.dmi',
-		)
-
-	armor = list(melee = 60, bullet = 60, laser = 60, energy = 40, bomb = 40, bio = 0, rad = 0)
-	flags_inv = HIDEEARS
-	siemens_coefficient = 0.7
 	valid_accessory_slots = null
 
 /obj/item/clothing/head/helmet/augment

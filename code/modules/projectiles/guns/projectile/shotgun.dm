@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/projectile/shotgun/pump
-	name = "shotgun"
-	desc = "The mass-produced W-T Remmington 29x shotgun is a favourite of police and security forces on many worlds. Uses 12g rounds."
+	name = "Remington 870"
+	desc = "The mass-produced Olympia Foundry Remington 870 shotgun is a favourite of police and security forces on many worlds. Uses 12g rounds."
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	max_shells = 4
@@ -43,7 +43,7 @@
 	update_icon()
 
 /obj/item/weapon/gun/projectile/shotgun/pump/combat
-	name = "combat shotgun"
+	name = "KS-40"
 	desc = "Built for close quarters combat, the Hephaestus Industries KS-40 is widely regarded as a weapon of choice for repelling boarders. Uses 12g rounds."
 	icon_state = "cshotgun"
 	item_state = "cshotgun"
@@ -54,7 +54,7 @@
 
 
 /obj/item/weapon/gun/projectile/shotgun/pump/combat/ksg
-	name = "KSG Shotgun"
+	name = "KSG"
 	desc = "A fine-tuned PyroCorp-manufactured KSG, with room for fourteen shells, you'll be sweeping all of the station hallways! Chambered in 12 gauge."
 	icon_state = "ksg"
 	max_shells = 14

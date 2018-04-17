@@ -307,7 +307,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/mini_uzi
 	name = "\improper Uzi"
-	desc = "The iconic Uzi is a lightweight, compact, fast firing machine pistol. Cybersun Industries famously still produces these designs, which have changed little since the 20th century. Uses .45 rounds."
+	desc = "The iconic Uzi is a lightweight, compact, fast firing machine pistol. Olympia Foundry famously still produces these designs, which have changed little since the 20th century. Uses .45 rounds."
 	icon_state = "mini-uzi"
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
@@ -330,7 +330,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/p90
 	name = "personal defense weapon"
-	desc = "The H90K is a compact, large capacity submachine gun produced by Hephaestus Industries. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
+	desc = "The H90K is a compact, large capacity submachine gun produced by Frontier Armament Company. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
 	icon_state = "p90smg"
 	item_state = "p90"
 	w_class = ITEMSIZE_NORMAL
@@ -352,7 +352,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/tommygun
 	name = "\improper Tommygun"
-	desc = "This weapon was made famous by gangsters in the 20th century. Cybersun Industries is currently reproducing these for a target market of historic gun collectors and classy criminals. Uses .45 rounds."
+	desc = "This weapon was made famous by gangsters in the 20th century. Olympia Foundry is currently reproducing these for a target market of historic gun collectors and classy criminals. Uses .45 rounds."
 	icon_state = "tommygun"
 	w_class = ITEMSIZE_NORMAL
 	caliber = ".45"
@@ -446,7 +446,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/c22r
 	name = "C-22r"
-	desc = "The C-22r is a select-fire SMG designed by Seburo Arms. DDeveloped in competition of Ward Takashi's WT-550 for NanoTrasen new SMG contract. Utimately, the WT-550 won and the C-22r is commonly seen in use by Frontier Militia and other private military contractors."
+	desc = "The C-22r is a select-fire SMG designed by Seburo Arms. Developed in competition of Ward Takashi's WT-550 for NanoTrasen new SMG contract. Utimately, the WT-550 won and the C-22r is commonly seen in use by Frontier Militia and other private military contractors."
 	icon_state = "pdw"
 	item_state = "c20r" // Placeholder
 	w_class = ITEMSIZE_NORMAL

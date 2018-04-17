@@ -1,7 +1,7 @@
 /obj/item/weapon/gun/projectile/colt
 	var/unique_reskin
-	name = ".45 pistol"
-	desc = "A cheap Martian knock-off of a Colt M1911. Uses .45 rounds."
+	name = "M1911"
+	desc = "An Olympia Foundry reproduction of the legendary Colt 1911. Chambered in .45 ACP."
 	magazine_type = /obj/item/ammo_magazine/m45
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
@@ -9,6 +9,7 @@
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/m1911.ogg'
 
 /obj/item/weapon/gun/projectile/colt/update_icon()
 	if(ammo_magazine)
@@ -23,7 +24,7 @@
 			icon_state = "[initial(icon_state)]-e"
 
 /obj/item/weapon/gun/projectile/colt/detective
-	desc = "A Martian recreation of an old pistol. Uses .45 rounds."
+	desc = "A Terran-made 1911 that seems to have seen some action. Looks very customizable."
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 
 /obj/item/weapon/gun/projectile/colt/detective/verb/rename_gun()
