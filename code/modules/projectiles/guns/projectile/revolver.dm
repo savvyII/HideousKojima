@@ -9,6 +9,7 @@
 	max_shells = 6
 	ammo_type = /obj/item/ammo_casing/a357
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
+	fire_sound = 'sound/weapons/revolver.ogg'
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
 
 /obj/item/weapon/gun/projectile/revolver/verb/spin_cylinder()
@@ -279,3 +280,25 @@ obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
 	fire_delay = 5.7 //Autorevolver. Also synced with the animation
 	fire_anim = "mosley_fire"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
+
+
+//--Eris ports--//
+/obj/item/weapon/gun/projectile/revolver/consul
+	name = "\improper \"Consul\" Revolver"
+	desc = "Are you feeling lucky, punk? Uses .44 rounds."
+	icon_state = "inspector"
+	item_state = "revolver"
+	caliber = ".44"
+	ammo_type = /obj/item/ammo_casing/a44r
+	handle_casings = CYCLE_CASINGS
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3)
+
+/obj/item/weapon/gun/projectile/revolver/consul/proc/update_charge()
+	if(loaded.len==0)
+		overlays += "inspector_off"
+	else
+		overlays += "inspector_on"
+
+/obj/item/weapon/gun/projectile/revolver/consul/update_icon()
+	overlays.Cut()
+	update_charge()

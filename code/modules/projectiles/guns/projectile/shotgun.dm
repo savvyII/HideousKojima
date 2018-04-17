@@ -14,6 +14,7 @@
 	ammo_type = /obj/item/ammo_casing/a12g/beanbag
 	projectile_type = /obj/item/projectile/bullet/shotgun
 	handle_casings = HOLD_CASINGS
+	fire_sound = 'sound/weapons/shotgun.ogg'
 	var/recentpump = 0 // to prevent spammage
 	var/action_sound = 'sound/weapons/shotgunpump.ogg'
 
@@ -50,6 +51,13 @@
 	max_shells = 7 //match the ammo box capacity, also it can hold a round in the chamber anyways, for a total of 8.
 	ammo_type = /obj/item/ammo_casing/a12g
 	load_method = SINGLE_CASING|SPEEDLOADER
+
+
+/obj/item/weapon/gun/projectile/shotgun/pump/combat/ksg
+	name = "KSG Shotgun"
+	desc = "A fine-tuned PyroCorp-manufactured KSG, with room for fourteen shells, you'll be sweeping all of the station hallways! Chambered in 12 gauge."
+	icon_state = "ksg"
+	max_shells = 14
 
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel
 	name = "double-barreled shotgun"

@@ -563,7 +563,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
     rare_loot = list(
         /obj/item/weapon/storage/belt/utility/alien/full,
         /obj/item/weapon/gun/projectile/revolver,
-        /obj/item/weapon/gun/projectile/sec,
+        /obj/item/weapon/gun/projectile/mk58,
         /obj/item/weapon/gun/launcher/crossbow
     )
 

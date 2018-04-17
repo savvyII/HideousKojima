@@ -35,7 +35,7 @@
 /datum/supply_packs/munitions/flareguns
 	name = "Weapons - Flare guns"
 	contains = list(
-			/obj/item/weapon/gun/projectile/sec/flash,
+			/obj/item/weapon/gun/projectile/mk58/flash,
 			/obj/item/ammo_magazine/m45/flash,
 			/obj/item/weapon/gun/projectile/shotgun/doublebarrel/flare,
 			/obj/item/weapon/storage/box/flashshells

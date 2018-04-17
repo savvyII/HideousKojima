@@ -28,6 +28,12 @@
 	caliber = ".357"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
+/obj/item/ammo_casing/a357/rubber
+	desc = "A .357 rubber bullet casing."
+	caliber = ".357"
+	icon_state = "rubber357"
+	projectile_type = /obj/item/projectile/bullet/pistol/rubber/strong
+
 /*
  * .38
  */
@@ -311,6 +317,16 @@
 /obj/item/ammo_casing/a545/hunter
 	desc = "A 5.45mm hunting bullet casing."
 	projectile_type = /obj/item/projectile/bullet/rifle/a545/hunter
+
+/*
+ * .380 Action Express
+ */
+
+/obj/item/ammo_casing/a380
+	desc = "A .380 bullet casing."
+	caliber = ".380"
+	projectile_type = /obj/item/projectile/bullet/pistol
+
 
 /*
  * Misc

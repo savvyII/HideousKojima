@@ -36,6 +36,12 @@
 	max_ammo = 6
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/s357/rubber
+	name = "speedloader (.357 rubber)"
+	desc = "A speedloader for .357 revolvers."
+	caliber = ".357"
+	ammo_type = /obj/item/ammo_casing/a357/rubber
+
 ///////// .38 /////////
 
 /obj/item/ammo_magazine/s38
@@ -325,6 +331,38 @@
 /obj/item/ammo_magazine/box/c9mm/empty
 	initial_ammo = 0
 
+//---------------- PDW ------------------
+/obj/item/ammo_magazine/m9mml
+	name = "\improper SMG magazine (9mm)"
+	icon_state = "smg"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	matter = list(DEFAULT_WALL_MATERIAL = 1800)
+	caliber = "9mm"
+	ammo_type = /obj/item/ammo_casing/a9mm
+	max_ammo = 30
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/m9mml/empty
+	initial_ammo = 0
+
+/obj/item/ammo_magazine/m9mml/ap
+	name = "\improper SMG magazine (9mm armor-piercing)"
+	ammo_type = /obj/item/ammo_casing/a9mm/ap
+
+/obj/item/ammo_magazine/m9mml/flash
+	name = "\improper SMG magazine (9mm flash)"
+	ammo_type = /obj/item/ammo_casing/a9mmf
+
+/obj/item/ammo_magazine/m9mml/rubber
+	name = "\improper SMG magazine (9mm rubber)"
+	ammo_type = /obj/item/ammo_casing/a9mmr
+
+/obj/item/ammo_magazine/m9mml/practice
+	name = "\improper SMG magazine (9mm practice)"
+	ammo_type = /obj/item/ammo_casing/a9mmp
+
+
 ///////// 10mm /////////
 
 /obj/item/ammo_magazine/m10mm
@@ -511,6 +549,10 @@
 	icon_state = "R44"
 	ammo_type = /obj/item/ammo_casing/a44r
 
+/obj/item/ammo_magazine/m44/rubber
+	desc = "A magazine for .44 less-than-lethal ammo."
+	ammo_type = /obj/item/ammo_casing/a44r
+
 ///////// 7.62mm /////////
 
 /obj/item/ammo_magazine/m762
@@ -606,7 +648,7 @@
 
 /obj/item/ammo_magazine/m12gdrum
 	name = "magazine (12 gauge)"
-	icon_state = "12g"
+	icon_state = "m12ga"
 	mag_type = MAGAZINE
 	caliber = "12g"
 	matter = list(DEFAULT_WALL_MATERIAL = 13000) //did the math. now fixed the exploityness of this thing. Have fun!
@@ -677,4 +719,17 @@
 	ammo_type = /obj/item/ammo_casing/cap
 	matter = list(DEFAULT_WALL_MATERIAL = 600)
 	max_ammo = 7
+	multiple_sprites = 1
+
+///////// .380 ACP /////////
+
+/obj/item/ammo_magazine/m380
+	name = "magazine (.380)"
+	icon_state = "9x19p"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	matter = list(DEFAULT_WALL_MATERIAL = 480)
+	caliber = ".380"
+	ammo_type = /obj/item/ammo_casing/a380
+	max_ammo = 8
 	multiple_sprites = 1

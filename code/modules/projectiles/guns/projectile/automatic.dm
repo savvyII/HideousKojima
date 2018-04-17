@@ -23,7 +23,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/c20r
 	name = "submachine gun"
-	desc = "The C-20r is a lightweight and rapid firing SMG, for when you REALLY need someone dead. It has 'Scarborough Arms - Per falcis, per pravitas' inscribed on the stock. Uses 10mm rounds."
+	desc = "The C-20r is a lightweight and rapid firing SMG, for when you REALLY need someone dead. It has a Seburo Arms authentication stamped on the stock. Uses 10mm rounds."
 	icon_state = "c20r"
 	item_state = "c20r"
 	w_class = ITEMSIZE_NORMAL
@@ -50,8 +50,8 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/sts35
-	name = "assault rifle"
-	desc = "The rugged STS-35 is a durable automatic weapon of a make popular on the frontier worlds. Uses 5.45mm rounds."
+	name = "STS-35"
+	desc = "The rugged Frontier Armament Company STS-35 is a durable automatic weapon that is standard issue with Frontier Federation forces. Uses 5.45mm rounds."
 	icon_state = "arifle"
 	item_state = "arifle"
 	wielded_item_state = "arifle-wielded"
@@ -83,7 +83,7 @@
 	if(!ignore_inhands) update_held_icon()
 
 /obj/item/weapon/gun/projectile/automatic/wt550
-	name = "machine pistol"
+	name = "WT-550"
 	desc = "The WT550 Saber is a cheap self-defense weapon mass-produced by Ward-Takahashi for paramilitary and private use. Uses 9mm rounds."
 	icon_state = "wt550"
 	item_state = "wt550"
@@ -92,7 +92,7 @@
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT
 	ammo_type = "/obj/item/ammo_casing/a9mmr"
-	fire_sound = 'sound/weapons/Gunshot_light.ogg'
+	fire_sound = 'sound/weapons/wt550.ogg'
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mmt/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmt)
@@ -107,8 +107,9 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/z8
-	name = "designated marksman rifle"
-	desc = "The Z8 Bulldog is an older model designated marksman rifle, made by the now defunct Zendai Foundries. Makes you feel like a space marine when you hold it, even though it can only hold 10 round magazines. Uses 7.62mm rounds and has an under barrel grenade launcher."
+	name = "Z8"
+	desc = "The Z8 is an older model designated marksman rifle, reproduced by Kusanagi Precision. \
+	Makes you feel like a space marine when you hold it. Uses 7.62mm rounds and has an under barrel grenade launcher."
 	icon_state = "carbine" // This isn't a carbine. :T
 	item_state = "z8carbine"
 	wielded_item_state = "z8carbine-wielded"
@@ -116,7 +117,7 @@
 	force = 10
 	caliber = "7.62mm"
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 3)
-	fire_sound = 'sound/weapons/Gunshot.ogg'
+	fire_sound = 'sound/weapons/z8.ogg'
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m762
@@ -177,9 +178,21 @@
 	else
 		user << "\The [launcher] is empty."
 
+/obj/item/weapon/gun/projectile/automatic/z8/civilian
+	name = "Z8-C"
+	desc = "The Z8-C is the civilian version of the Z8 DMR, locked in semi-auto and the grenade launcher removed."
+	use_launcher = 0
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1,    fire_delay=0,    move_delay=null, use_launcher=null, burst_accuracy=null, dispersion=null)
+		)
+
+/obj/item/weapon/gun/projectile/automatic/z8/examine(mob/user)
+	..()
+
 /obj/item/weapon/gun/projectile/automatic/l6_saw
-	name = "light machine gun"
-	desc = "A rather traditionally made L6 SAW with a pleasantly lacquered wooden pistol grip. 'Aussec Armoury-2531' is engraved on the reciever. Uses 5.45mm rounds. It's also compatible with magazines from STS-35 assault rifles."
+	name = "L6 SAW"
+	desc = "A rather traditionally made L6 SAW with a pleasantly lacquered wooden pistol grip. 'Olympia Foundry-2531' is engraved on the reciever. Uses 5.45mm rounds. It's also compatible with magazines from STS-35 assault rifles."
 	icon_state = "l6closed100"
 	item_state = "l6closed"
 	w_class = ITEMSIZE_LARGE
@@ -260,8 +273,9 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/as24
-	name = "automatic shotgun"
-	desc = "The AS-24 is a rugged looking automatic shotgun produced for the military by Gurov Projectile Weapons LLC. For very obvious reasons, it's illegal to own in many juristictions. Uses 12g rounds."
+	name = "AS-24"
+	desc = "The AS-24 is a rugged and dangerous automatic shotgun produced by PyroCorp Industries. Due to the nature of this firearm, \
+	it is classified as a destructive device on many civilized worlds and is illegal to own. Commonly seen in use by Frontier Federation shock troopers and is chambered in 12 gauge."
 	icon_state = "ashot"
 	item_state = null
 	w_class = ITEMSIZE_LARGE
@@ -270,6 +284,7 @@
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/bulldog.ogg'
 	magazine_type = /obj/item/ammo_magazine/m12gdrum
 	allowed_magazines = list(/obj/item/ammo_magazine/m12gdrum)
 	projectile_type = /obj/item/projectile/bullet/shotgun
@@ -357,9 +372,11 @@
 	icon_state = (ammo_magazine)? "tommygun" : "tommygun-empty"
 //	update_held_icon()
 
-/obj/item/weapon/gun/projectile/automatic/bullpup // Admin abuse assault rifle. ToDo: Make this less shit. Maybe remove its autofire, and make it spawn with only 10 rounds at start.
-	name = "bullpup rifle"
-	desc = "The bullpup configured GP3000 is a battle rifle produced by Gurov Projectile Weapons LLC. It is sold almost exclusively to standing armies. Uses 7.62mm rounds."
+/obj/item/weapon/gun/projectile/automatic/c31a
+	name = "C-31A"
+	desc = "C-31A"
+	desc = "The Seburo Arms C-31A is a lightweight, sturdy and hard-hitting bullpup assault rifle. It is the standard issue firearm of the SSA Armed Forces \
+	and can be found in use by Frontier Federation forces as well. Uses 7.62mm rounds."
 	icon_state = "bullpup-small"
 	item_state = "bullpup"
 	w_class = ITEMSIZE_LARGE
@@ -368,6 +385,7 @@
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/c31a.ogg'
 	magazine_type = /obj/item/ammo_magazine/m762
 	allowed_magazines = list(/obj/item/ammo_magazine/m762, /obj/item/ammo_magazine/m762m)
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
@@ -379,7 +397,7 @@
 		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6))
 		)
 
-/obj/item/weapon/gun/projectile/automatic/bullpup/update_icon(var/ignore_inhands)
+/obj/item/weapon/gun/projectile/automatic/c31a/update_icon(var/ignore_inhands)
 	..()
 	if(istype(ammo_magazine,/obj/item/ammo_magazine/m762))
 		icon_state = "bullpup-small"
@@ -389,3 +407,100 @@
 		item_state = "bullpup-empty"
 	if(!ignore_inhands)
 		update_held_icon()
+
+//--Eridani Additions--//
+
+/obj/item/weapon/gun/projectile/automatic/c18r
+	name = "C-18r"
+	desc = "The Seburo Arms 9x19mm C-18r \"Sol\" is a compact and reliable bullpup submachine gun commonly seen in use by special forces all around the galaxy. Uses 9mm rounds."
+	icon_state = "SMG-IS"
+	item_state = "wt550"
+	w_class = ITEMSIZE_LARGE
+	slot_flags = SLOT_BELT
+	caliber = "9mm"
+	magazine_type = /obj/item/ammo_magazine/m9mml
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mm, /obj/item/ammo_magazine/m9mml)
+	load_method = MAGAZINE
+	multi_aim = 1
+	burst_delay = 2
+	fire_sound = 'sound/weapons/c18r.ogg'
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15),       dispersion=list(0.0, 0.6, 1.0)),
+		)
+
+/obj/item/weapon/gun/projectile/automatic/c18r/proc/update_charge()
+	if(!ammo_magazine)
+		return
+	var/ratio = ammo_magazine.stored_ammo.len / ammo_magazine.max_ammo
+	if(ratio < 0.25 && ratio != 0)
+		ratio = 0.25
+	ratio = round(ratio, 0.25) * 100
+	overlays += "smg_[ratio]"
+
+/obj/item/weapon/gun/projectile/automatic/c18r/update_icon()
+	icon_state = (ammo_magazine)? "SMG-IS" : "SMG-IS-empty"
+	overlays.Cut()
+	update_charge()
+
+/obj/item/weapon/gun/projectile/automatic/c22r
+	name = "C-22r"
+	desc = "The C-22r is a select-fire SMG designed by Seburo Arms. DDeveloped in competition of Ward Takashi's WT-550 for NanoTrasen new SMG contract. Utimately, the WT-550 won and the C-22r is commonly seen in use by Frontier Militia and other private military contractors."
+	icon_state = "pdw"
+	item_state = "c20r" // Placeholder
+	w_class = ITEMSIZE_NORMAL
+	caliber = "9mm"
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BELT
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/m9mml
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mml)
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
+		)
+
+/obj/item/weapon/gun/projectile/automatic/c22r/update_icon(var/ignore_inhands)
+	..()
+	if(istype(ammo_magazine,/obj/item/ammo_magazine/m9mm))
+		icon_state = "pdw-short"
+	else
+		icon_state = (ammo_magazine)? "pdw" : "pdw-empty"
+	if(!ignore_inhands) update_held_icon()
+
+/obj/item/weapon/gun/projectile/automatic/pcx12
+	name = "PC-X12 'Bulldog' automatic shotgun"
+	desc = "The PyroCorp Experimental 12 gauge automatic shotgun is the soon to be successor to it's successful AS-24. The bullpup design allows for compact firepower and controlled recoil. \
+	Frontier Marine Marauders are reported to be exclusively using this shotgun in it's boarding parties. If you're seeing this, you should be in fear of your life."
+	icon_state = "bulldog"
+	item_state = "bulldog"
+	w_class = ITEMSIZE_LARGE
+	force = 10
+	caliber = "12g"
+	fire_sound = 'sound/weapons/bulldog.ogg'
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/m12gdrum
+	allowed_magazines = list(/obj/item/ammo_magazine/m12gdrum)
+	projectile_type = /obj/item/projectile/bullet/shotgun
+	auto_eject = 1
+	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+
+//	one_handed_penalty = 45
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="4-round bursts", burst=4, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15), dispersion=list(0.0, 0.6))
+		)
+
+/obj/item/weapon/gun/projectile/automatic/pcx12/update_icon(var/ignore_inhands)
+	..()
+	if(ammo_magazine)
+		icon_state = "bulldog"
+	else
+		icon_state = "bulldog-empty"
+
+	if(!ignore_inhands) update_held_icon()
+	return

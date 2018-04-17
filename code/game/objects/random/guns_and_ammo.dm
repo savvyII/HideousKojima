@@ -52,8 +52,8 @@
 				prob(1);/obj/item/weapon/gun/projectile/heavysniper,
 				prob(4);/obj/item/weapon/gun/projectile/luger,
 				prob(3);/obj/item/weapon/gun/projectile/luger/brown,
-				prob(4);/obj/item/weapon/gun/projectile/sec,
-				prob(3);/obj/item/weapon/gun/projectile/sec/wood,
+				prob(4);/obj/item/weapon/gun/projectile/mk58,
+				prob(3);/obj/item/weapon/gun/projectile/mk58/wood,
 				prob(4);/obj/item/weapon/gun/projectile/p92x,
 				prob(3);/obj/item/weapon/gun/projectile/p92x/brown,
 				prob(4);/obj/item/weapon/gun/projectile/pistol,
@@ -90,9 +90,9 @@
 	icon_state = "secgundark"
 
 /obj/random/handgun/item_to_spawn()
-	return pick(prob(4);/obj/item/weapon/gun/projectile/sec,
+	return pick(prob(4);/obj/item/weapon/gun/projectile/mk58,
 				prob(4);/obj/item/weapon/gun/projectile/p92x,
-				prob(3);/obj/item/weapon/gun/projectile/sec/wood,
+				prob(3);/obj/item/weapon/gun/projectile/mk58/wood,
 				prob(3);/obj/item/weapon/gun/projectile/p92x/brown,
 				prob(3);/obj/item/weapon/gun/projectile/colt,
 				prob(2);/obj/item/weapon/gun/projectile/luger,
@@ -108,8 +108,8 @@
 	icon_state = "secgundark"
 
 /obj/random/handgun/sec/item_to_spawn()
-	return pick(prob(3);/obj/item/weapon/gun/projectile/sec,
-				prob(1);/obj/item/weapon/gun/projectile/sec/wood)
+	return pick(prob(3);/obj/item/weapon/gun/projectile/mk58,
+				prob(1);/obj/item/weapon/gun/projectile/mk58/wood)
 
 /obj/random/ammo
 	name = "Random Ammunition"

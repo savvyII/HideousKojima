@@ -252,7 +252,7 @@
 			/obj/item/clothing/under/rank/warden/corp,
 			/obj/item/clothing/suit/storage/vest/wardencoat,
 			/obj/item/clothing/suit/storage/vest/wardencoat/alt,
-			/obj/item/clothing/head/helmet/warden,
+			/obj/item/clothing/head/helmet/security/warden,
 			/obj/item/weapon/cartridge/security,
 			/obj/item/device/radio/headset/headset_sec,
 			/obj/item/clothing/glasses/sunglasses/sechud,
@@ -275,11 +275,11 @@
 /datum/supply_packs/security/headofsecgear
 	name = "Gear - Head of security equipment"
 	contains = list(
-			/obj/item/clothing/head/helmet/HoS,
+			/obj/item/clothing/head/helmet/security/hos,
 			/obj/item/clothing/suit/storage/vest/hos,
 			/obj/item/clothing/under/rank/head_of_security/corp,
 			/obj/item/clothing/suit/storage/vest/hoscoat,
-			/obj/item/clothing/head/helmet/dermal,
+			/obj/item/clothing/head/helmet/security/dermal,
 			/obj/item/weapon/cartridge/hos,
 			/obj/item/device/radio/headset/heads/hos,
 			/obj/item/clothing/glasses/sunglasses/sechud,

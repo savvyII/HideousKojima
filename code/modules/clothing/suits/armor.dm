@@ -486,7 +486,7 @@
 	siemens_coefficient = 1
 
 //Modular plate carriers
-/obj/item/clothing/suit/armor/pcarrier
+//obj/item/clothing/suit/armor/pcarrier
 	name = "plate carrier"
 	desc = "A lightweight black plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
 	icon = 'icons/obj/clothing/modular_armor.dmi'
@@ -496,39 +496,39 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_ARMOR_L, ACCESSORY_SLOT_ARMOR_S)
 	blood_overlay_type = "armor"
 
-/obj/item/clothing/suit/armor/pcarrier/light
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate)
+/obj/item/clothing/suit/armor/pcarrier/security
+	name = "security plate carrier"
+	desc = "A standard issue plate carrier for all NTDS contractors."
+	icon_state = "pcarrier_sec"
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security, /obj/item/clothing/accessory/armor/tag/nt, /obj/item/clothing/accessory/storage/pouches)
 
-/obj/item/clothing/suit/armor/pcarrier/light/sol
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate, /obj/item/clothing/accessory/armor/tag)
+/obj/item/clothing/suit/armor/pcarrier/security/hos
+	name = "head of security's plate carrier"
+	desc = "A gold trimmed plate carrier for the man that protects all your worthless lives."
+	icon_state = "pcarrier_hos"
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security/heavy, /obj/item/clothing/accessory/armor/tag/nt, /obj/item/clothing/accessory/storage/pouches/large)
 
-/obj/item/clothing/suit/armor/pcarrier/light/nt
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate, /obj/item/clothing/accessory/armor/tag/nt)
+/obj/item/clothing/suit/armor/pcarrier/security/warden
+	name = "warden's plate carrier"
+	desc = "A plate carrier for the owner of this brig."
+	icon_state = "pcarrier_warden"
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security/heavy, /obj/item/clothing/accessory/armor/tag/nt, /obj/item/clothing/accessory/storage/pouches)
 
-/obj/item/clothing/suit/armor/pcarrier/medium
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/medium, /obj/item/clothing/accessory/storage/pouches)
+/obj/item/clothing/suit/armor/pcarrier/security/detective
+	name = "detective's plate carrier"
+	desc = "A standard issue plate carrier for all licensed detectives and private eyes."
+	icon_state = "pcarrier_detective"
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security, /obj/item/clothing/accessory/armor/tag/nt, /obj/item/clothing/accessory/storage/pouches)
 
-/obj/item/clothing/suit/armor/pcarrier/medium/sol
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/medium, /obj/item/clothing/accessory/storage/pouches, /obj/item/clothing/accessory/armor/tag)
-
-/obj/item/clothing/suit/armor/pcarrier/medium/security
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/medium, /obj/item/clothing/accessory/storage/pouches, /obj/item/clothing/accessory/armor/tag/sec)
-
-/obj/item/clothing/suit/armor/pcarrier/medium/command
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/medium, /obj/item/clothing/accessory/storage/pouches, /obj/item/clothing/accessory/armor/tag/com)
-
-/obj/item/clothing/suit/armor/pcarrier/medium/nt
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/medium, /obj/item/clothing/accessory/storage/pouches, /obj/item/clothing/accessory/armor/tag/nt)
+/obj/item/clothing/suit/armor/pcarrier/security/detective/csi
+	name = "CSI's plate carrier"
+	icon_state = "pcarrier_csi"
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security, /obj/item/clothing/accessory/armor/tag/nt)
 
 /obj/item/clothing/suit/armor/pcarrier/blue
 	name = "blue plate carrier"
 	desc = "A lightweight blue plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
 	icon_state = "pcarrier_blue"
-
-/obj/item/clothing/suit/armor/pcarrier/blue/sol
-	name = "peacekeeper plate carrier"
-	desc = "A lightweight plate carrier vest in SCG Peacekeeper colors. It can be equipped with armor plates, but provides no protection of its own."
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/medium, /obj/item/clothing/accessory/storage/pouches/blue, /obj/item/clothing/accessory/armor/armguards/blue, /obj/item/clothing/accessory/armor/tag)
 
 /obj/item/clothing/suit/armor/pcarrier/green
 	name = "green plate carrier"
@@ -545,10 +545,11 @@
 	desc = "A lightweight tan plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
 	icon_state = "pcarrier_tan"
 
-/obj/item/clothing/suit/armor/pcarrier/tan/tactical
-	name = "tactical plate carrier"
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/tactical, /obj/item/clothing/accessory/storage/pouches/large/tan)
+/obj/item/clothing/suit/armor/pcarrier/tan/combat
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/combat, /obj/item/clothing/accessory/storage/pouches/large/tan)
 
-/obj/item/clothing/suit/armor/pcarrier/merc
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/merc, /obj/item/clothing/accessory/armor/armguards/merc, /obj/item/clothing/accessory/armor/legguards/merc, /obj/item/clothing/accessory/storage/pouches/large)
-
+/obj/item/clothing/suit/armor/pcarrier/swat
+	name = "swat plate carrier"
+	desc = "A lightweight tactical plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
+	icon_state = "pcarrier_swat"
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/swat, /obj/item/clothing/accessory/storage/pouches/large/tan, /obj/item/clothing/accessory/)
