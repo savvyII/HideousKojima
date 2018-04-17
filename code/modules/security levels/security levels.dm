@@ -33,9 +33,9 @@
 				security_level = SEC_LEVEL_BLUE
 			if(SEC_LEVEL_RED)
 				if(security_level < SEC_LEVEL_RED)
-					security_announcement_up.Announce("[config.alert_desc_red_upto]", "Attention! Code red!")
+					security_announcement_up.Announce("[config.alert_desc_red_upto]", "Attention! Code red!", new_sound = 'sound/effects/redalert1.ogg')
 				else
-					security_announcement_down.Announce("[config.alert_desc_red_downto]", "Attention! Code red!")
+					security_announcement_up.Announce("[config.alert_desc_red_upto]", "Attention! Code red!", new_sound = 'sound/effects/redalert1.ogg')
 				security_level = SEC_LEVEL_RED
 				/*	- At the time of commit, setting status displays didn't work properly
 				var/obj/machinery/computer/communications/CC = locate(/obj/machinery/computer/communications,world)
