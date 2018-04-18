@@ -19,7 +19,7 @@
 			SA.Weaken(5)
 			if(isslime(SA))
 				var/mob/living/simple_animal/slime/S = SA
-				S.adjust_discipline(3)
+				S.adjust_discipline(6)
 
 	// Prometheans.
 	if(ishuman(M))
@@ -97,7 +97,7 @@
 	impact_type = /obj/effect/projectile/laser_omni/impact
 
 /obj/item/projectile/beam/stun/xeno/weak //Weaker variant for non-research equipment, turrets, or rapid fire types.
-	agony = 3
+	agony = 6
 
 /obj/item/projectile/beam/stun/xeno/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null)
 	if(istype(target, /mob/living))

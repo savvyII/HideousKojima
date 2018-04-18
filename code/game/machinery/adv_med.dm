@@ -5,7 +5,7 @@
 	var/locked
 	name = "Body Scanner"
 	icon = 'icons/obj/Cryogenic2.dmi'
-	icon_state = "body_scanner_0"
+	icon_state = "scanner_open"
 	density = 1
 	anchored = 1
 	circuit = /obj/item/weapon/circuitboard/body_scanner
@@ -59,7 +59,7 @@
 			return
 		M.forceMove(src)
 		occupant = M
-		icon_state = "body_scanner_1"
+		update_icon()
 		add_fingerprint(user)
 		qdel(G)
 
@@ -98,7 +98,7 @@
 
 	O.forceMove(src)
 	occupant = O
-	icon_state = "body_scanner_1"
+	update_icon()
 	add_fingerprint(user)
 
 /obj/machinery/bodyscanner/relaymove(mob/user as mob)
@@ -124,7 +124,7 @@
 		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.loc = src.loc
 	occupant = null
-	icon_state = "body_scanner_0"
+	update_icon()
 	return
 
 /obj/machinery/bodyscanner/ex_act(severity)
@@ -166,7 +166,7 @@
 	var/temphtml
 	name = "Body Scanner Console"
 	icon = 'icons/obj/Cryogenic2.dmi'
-	icon_state = "body_scannerconsole"
+	icon_state = "scanner_terminal_off"
 	dir = 8
 	density = 0
 	anchored = 1
@@ -195,7 +195,7 @@
 		return
 	else
 		return attack_hand(user)
-
+/*
 /obj/machinery/body_scanconsole/power_change()
 	if(stat & BROKEN)
 		icon_state = "body_scannerconsole-p"
@@ -206,7 +206,7 @@
 		spawn(rand(0, 15))
 			icon_state = "body_scannerconsole-p"
 			stat |= NOPOWER
-
+*/
 /obj/machinery/body_scanconsole/ex_act(severity)
 	switch(severity)
 		if(1.0)
@@ -267,6 +267,7 @@
 
 		var/occupantData[0]
 		if(scanner.occupant && ishuman(scanner.occupant))
+			update_icon()
 			var/mob/living/carbon/human/H = scanner.occupant
 			occupantData["name"] = H.name
 			occupantData["stat"] = H.stat
@@ -590,3 +591,55 @@
 		dat = "<font color='red'> Error: No Body Scanner connected.</font>"
 
 	printing_text = dat
+
+/obj/machinery/bodyscanner/update_icon()
+	if(stat & (NOPOWER|BROKEN))
+		icon_state = "scanner_off"
+		set_light(0)
+	else
+		var/h_ratio
+		if(occupant)
+			h_ratio = occupant.health / occupant.maxHealth
+			switch(h_ratio)
+				if(1.000)
+					icon_state = "scanner_green"
+					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIME)
+				if(0.001 to 0.999)
+					icon_state = "scanner_yellow"
+					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_YELLOW)
+				if(-0.999 to 0.000)
+					icon_state = "scanner_red"
+					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_RED)
+				else
+					icon_state = "scanner_death"
+					set_light(l_range = 1.5, l_power = 2, l_color = COLOR_RED)
+		else
+			icon_state = "scanner_open"
+			set_light(0)
+		if(console)
+			console.update_icon(h_ratio)
+
+/obj/machinery/body_scanconsole/update_icon(var/h_ratio)
+	if(stat & (NOPOWER|BROKEN))
+		icon_state = "scanner_terminal_off"
+		set_light(0)
+	else
+		if(scanner)
+			if(h_ratio)
+				switch(h_ratio)
+					if(1.000)
+						icon_state = "scanner_terminal_green"
+						set_light(l_range = 1.5, l_power = 2, l_color = COLOR_LIME)
+					if(-0.999 to 0.000)
+						icon_state = "scanner_terminal_red"
+						set_light(l_range = 1.5, l_power = 2, l_color = COLOR_RED)
+					else
+						icon_state = "scanner_terminal_dead"
+						set_light(l_range = 1.5, l_power = 2, l_color = COLOR_RED)
+			else
+				icon_state = "scanner_terminal_blue"
+				set_light(l_range = 1.5, l_power = 2, l_color = COLOR_BLUE)
+		else
+			icon_state = "scanner_terminal_off"
+			set_light(0)
+

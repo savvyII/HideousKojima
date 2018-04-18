@@ -76,6 +76,3 @@
 
 /obj/structure/curtain/open/shower/security
 	color = "#AA0000"
-
-#undef SHOWER_OPEN_LAYER
-#undef SHOWER_CLOSED_LAYER

@@ -242,9 +242,7 @@
 
 	slime_mutation = list(
 			/mob/living/simple_animal/slime/metal,
-			/mob/living/simple_animal/slime/blue,
-			/mob/living/simple_animal/slime/amber,
-			/mob/living/simple_animal/slime/amber
+			/mob/living/simple_animal/slime/blue
 		)
 
 /mob/living/simple_animal/slime/silver/bullet_act(var/obj/item/projectile/P, var/def_zone)
@@ -380,7 +378,7 @@
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 
-
+/*
 /mob/living/simple_animal/slime/amber
 	desc = "This slime seems to be an expert in the culinary arts, as they create their own food to share with others.  \
 	They would probably be very important to other slimes, if the other colors didn't try to kill them."
@@ -418,7 +416,7 @@
 				continue
 			H.nutrition = between(0, H.nutrition + rand(15, 25), 600)
 
-
+*/
 
 /mob/living/simple_animal/slime/cerulean
 	desc = "This slime is generally superior in a wide range of attributes, compared to the common slime.  The jack of all trades, but master of none."
