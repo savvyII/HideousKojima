@@ -110,7 +110,7 @@
 	name = "Z8"
 	desc = "The Z8 is an older model designated marksman rifle, reproduced by Kusanagi Precision. \
 	Makes you feel like a space marine when you hold it. Uses 7.62mm rounds and has an under barrel grenade launcher."
-	icon_state = "z8c" // This isn't a carbine. :T
+	icon_state = "z8" // This isn't a carbine. :T
 	item_state = "z8carbine"
 	wielded_item_state = "z8carbine-wielded"
 	w_class = ITEMSIZE_LARGE
@@ -198,15 +198,15 @@
 //	one_handed_penalty = 60
 	burst_delay = 4
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1,    fire_delay=0,    move_delay=null, use_launcher=null, burst_accuracy=null, dispersion=null)
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/z8c/update_icon(var/ignore_inhands)
 	..()
 	if(istype(ammo_magazine,/obj/item/ammo_magazine/m762m))
-		icon_state = "z8-large" // If using the small magazines, use the small magazine sprite.
+		icon_state = "z8c-large" // If using the small magazines, use the small magazine sprite.
 	else
-		icon_state = (ammo_magazine)? "z8" : "z8-empty"
+		icon_state = (ammo_magazine)? "z8c" : "z8c-empty"
 	if(!ignore_inhands) update_held_icon()
 
 
