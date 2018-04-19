@@ -110,7 +110,7 @@
 	name = "Z8"
 	desc = "The Z8 is an older model designated marksman rifle, reproduced by Kusanagi Precision. \
 	Makes you feel like a space marine when you hold it. Uses 7.62mm rounds and has an under barrel grenade launcher."
-	icon_state = "carbine" // This isn't a carbine. :T
+	icon_state = "z8c" // This isn't a carbine. :T
 	item_state = "z8carbine"
 	wielded_item_state = "z8carbine-wielded"
 	w_class = ITEMSIZE_LARGE
@@ -121,7 +121,7 @@
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m762
-	allowed_magazines = list(/obj/item/ammo_magazine/m762)
+	allowed_magazines = list(/obj/item/ammo_magazine/m762, /obj/item/ammo_magazine/m762m)
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
@@ -164,12 +164,11 @@
 
 /obj/item/weapon/gun/projectile/automatic/z8/update_icon(var/ignore_inhands)
 	..()
-	if(ammo_magazine)
-		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
+	if(istype(ammo_magazine,/obj/item/ammo_magazine/m762m))
+		icon_state = "z8-large" // If using the small magazines, use the small magazine sprite.
 	else
-		icon_state = "carbine"
+		icon_state = (ammo_magazine)? "z8" : "z8-empty"
 	if(!ignore_inhands) update_held_icon()
-	return
 
 /obj/item/weapon/gun/projectile/automatic/z8/examine(mob/user)
 	..()
@@ -178,17 +177,38 @@
 	else
 		user << "\The [launcher] is empty."
 
-/obj/item/weapon/gun/projectile/automatic/z8/civilian
+/obj/item/weapon/gun/projectile/automatic/z8c
 	name = "Z8-C"
-	desc = "The Z8-C is the civilian version of the Z8 DMR, locked in semi-auto and the grenade launcher removed."
-	use_launcher = 0
-
+	desc = "The Z8-C is the civilian version of Kusanagi Precision's workhorse DMR. Popular with law-enforcement and security agencies."
+	icon_state = "z8c" // This isn't a carbine. :T
+	item_state = "z8carbine"
+	wielded_item_state = "z8carbine-wielded"
+	w_class = ITEMSIZE_LARGE
+	force = 10
+	caliber = "7.62mm"
+	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 3)
+	fire_sound = 'sound/weapons/z8.ogg'
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/m762
+	allowed_magazines = list(/obj/item/ammo_magazine/m762, /obj/item/ammo_magazine/m762m)
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	auto_eject = 1
+	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+//	one_handed_penalty = 60
+	burst_delay = 4
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1,    fire_delay=0,    move_delay=null, use_launcher=null, burst_accuracy=null, dispersion=null)
 		)
 
-/obj/item/weapon/gun/projectile/automatic/z8/examine(mob/user)
+/obj/item/weapon/gun/projectile/automatic/z8c/update_icon(var/ignore_inhands)
 	..()
+	if(istype(ammo_magazine,/obj/item/ammo_magazine/m762m))
+		icon_state = "z8-large" // If using the small magazines, use the small magazine sprite.
+	else
+		icon_state = (ammo_magazine)? "z8" : "z8-empty"
+	if(!ignore_inhands) update_held_icon()
+
 
 /obj/item/weapon/gun/projectile/automatic/l6_saw
 	name = "L6 SAW"

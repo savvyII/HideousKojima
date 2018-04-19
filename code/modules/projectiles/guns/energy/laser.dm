@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/energy/laser
-	name = "laser rifle"
-	desc = "A Hephaestus Industries G40E rifle, designed to kill with concentrated energy blasts.  This variant has the ability to \
+	name = "CLR40"
+	desc = "An American Energy Conglomerate CLR40 rifle, designed to kill with concentrated energy blasts.  This variant has the ability to \
 	switch between standard fire and a more efficent but weaker 'suppressive' fire."
 	icon_state = "laser"
 	item_state = "laser"
@@ -26,7 +26,7 @@
 
 /obj/item/weapon/gun/energy/laser/practice
 	name = "practice laser carbine"
-	desc = "A modified version of the HI G40E, this one fires less concentrated energy bolts designed for target practice."
+	desc = "A modified version of the CLR40, this one fires less concentrated energy bolts designed for target practice."
 	projectile_type = /obj/item/projectile/beam/practice
 	charge_cost = 48
 
