@@ -14,55 +14,64 @@ var/global/list/seen_religions = list()
 	return
 
 var/global/list/citizenship_choices = list(
-	"Earth",
-	"Mars",
-	"Sif",
-	"Binma",
-	"Moghes",
-	"Meralar",
-	"Qerr'balak"
-	)
+    "Earth",
+    "Mars",
+    "Biesel",
+    "Viir’quiwq",
+    "Sintha",
+    "Naj'd",
+    "Lescata"
+    )
 
 var/global/list/home_system_choices = list(
-	"Sol",
-	"Vir",
-	"Nyx",
-	"Tau Ceti",
-	"Qerr'valis",
-	"Epsilon Ursae Minoris",
-	"Rarkajar"
-	)
+    "SSA",
+    "Tau Ceti",
+    "Epsilon Eridani",
+    "Viir’xuqir",
+    "Aiz'dihar",
+    "Slazthin",
+    "Wolf 1061"
+      )
 
 var/global/list/faction_choices = list(
-	"Sol Central",
-	"Vey Med",
-	"Einstein Engines",
-	"Free Trade Union",
-	"NanoTrasen",
-	"Ward-Takahashi GMB",
-	"Gilthari Exports",
-	"Grayson Manufactories Ltd.",
-	"Aether Atmospherics",
-	"Zeng-Hu Pharmaceuticals",
-	"Hephaestus Industries",
-	"Morpheus Cyberkinetics",
-	"Xion Manufacturing Group"
-	)
+    "SSA",
+    "Vey Med",
+    "Einstein Engines",
+    "EOTR",
+    "NanoTrasen",
+    "Ward-Takahashi GMB",
+    "Frontier Federation",
+    "Grayson Manufactories Ltd.",
+    "Kusanagi Precision Machinery",
+    "Zeng-Hu Pharmaceuticals",
+    "Hephaestus Industries",
+    "Morpheus Cyberkinetics",
+    "Xion Manufacturing Group",
+    "Worker's State of Zhadhj'a",
+    "Seburo Arms",
+    "PyroCorp",
+    "Frontier Armament Company",
+    "Ace Energy Consortium",
+    "Olympia Foundry"
 
-var/global/list/antag_faction_choices = list()	//Should be populated after brainstorming. Leaving as blank in case brainstorming does not occur.
+    )
+
+var/global/list/antag_faction_choices = list()    //Should be populated after brainstorming. Leaving as blank in case brainstorming does not occur.
 
 var/global/list/antag_visiblity_choices = list(
-	"Hidden",
-	"Shared",
-	"Known"
-	)
+    "Hidden",
+    "Shared",
+    "Known"
+    )
 
 var/global/list/religion_choices = list(
-	"Unitarianism",
-	"Hinduism",
-	"Buddhist",
-	"Islam",
-	"Christianity",
-	"Agnosticism",
-	"Deism"
-	)
+    "Unitarianism",
+    "Hinduism",
+    "Buddhist",
+    "Islam",
+    "Christianity",
+    "Agnosticism",
+    "Deism",
+    "Ssrazhiit",
+    "Universalism"
+    )
