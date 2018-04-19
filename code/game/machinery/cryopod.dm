@@ -231,9 +231,9 @@
 	name = "robotic storage unit"
 	desc = "A storage unit for robots."
 	icon = 'icons/obj/structures.dmi'
-	icon_state = "borg_pod_0"
-	base_icon_state = "borg_pod_0"
-	occupied_icon_state = "borg_pod_1"
+	icon_state = "borg_pod_open"
+	base_icon_state = "borg_pod_open"
+	occupied_icon_state = "borg_pod_closed"
 	on_store_message = "has entered robotic storage."
 	on_store_name = "Robotic Storage Oversight"
 	on_enter_occupant_message = "The storage unit broadcasts a sleep signal to you. Your systems start to shut down, and you enter low-power mode."
