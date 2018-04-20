@@ -85,13 +85,13 @@
 
 
 /datum/shuttle_destination/shuttle1/root
-	name = "Southern Cross Hangar One"
+	name = "Caerus Hangar One"
 	my_area = /area/shuttle/shuttle1/start
 	preferred_interim_area = /area/shuttle/shuttle1/transit
 
 	dock_target = "hangar_1"
 	radio_announce = 1
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Caerus Docking Computer"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle1/outside_SC = 0,
@@ -104,13 +104,13 @@
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar One."
 
 /datum/shuttle_destination/shuttle2/root
-	name = "Southern Cross Hangar Two"
+	name = "Caerus Hangar Two"
 	my_area = /area/shuttle/shuttle2/start
 	preferred_interim_area = /area/shuttle/shuttle2/transit
 
 	dock_target = "hangar_2"
 	radio_announce = 1
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Caerus Docking Computer"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle2/outside_SC = 0,
@@ -124,7 +124,7 @@
 
 
 /datum/shuttle_destination/shuttle1/outside_SC
-	name = "Outside of NLS Southern Cross"
+	name = "Outside of NTTRS Caerus"
 	my_area = /area/shuttle/shuttle1/seconddeck
 	preferred_interim_area = /area/shuttle/shuttle1/transit
 
@@ -134,7 +134,7 @@
 	)
 
 /datum/shuttle_destination/shuttle2/outside_SC
-	name = "Outside of NLS Southern Cross"
+	name = "Outside of NTTRS Caerus"
 	my_area = /area/shuttle/shuttle2/seconddeck
 	preferred_interim_area = /area/shuttle/shuttle2/transit
 
@@ -145,13 +145,13 @@
 
 
 /datum/shuttle_destination/shuttle1/docked_SC
-	name = "Southern Cross Docking Port"
+	name = "Caerus Docking Port"
 	my_area = /area/shuttle/shuttle1/arrivals_dock
 	preferred_interim_area = /area/shuttle/shuttle1/transit
 
 	dock_target = "shuttle1_dock_airlocksc"
 	radio_announce = 1
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Caerus Docking Computer"
 
 /datum/shuttle_destination/shuttle1/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
@@ -161,13 +161,13 @@
 
 
 /datum/shuttle_destination/shuttle2/docked_SC
-	name = "Southern Cross Docking Port"
+	name = "Caerus Docking Port"
 	my_area = /area/shuttle/shuttle2/arrivals_dock
 	preferred_interim_area = /area/shuttle/shuttle2/transit
 
 	dock_target = "shuttle2_dock_airlocksc"
 	radio_announce = 1
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Caerus Docking Computer"
 
 /datum/shuttle_destination/shuttle2/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
@@ -177,7 +177,7 @@
 
 
 /datum/shuttle_destination/shuttle1/sif_orbit
-	name = "Sif Orbit"
+	name = "Eridani Orbit"
 	my_area = /area/shuttle/shuttle1/orbit
 	preferred_interim_area = /area/shuttle/shuttle1/transit
 
@@ -186,7 +186,7 @@
 	)
 
 /datum/shuttle_destination/shuttle2/sif_orbit
-	name = "Sif Orbit"
+	name = "Eridani Orbit"
 	my_area = /area/shuttle/shuttle2/orbit
 	preferred_interim_area = /area/shuttle/shuttle2/transit
 
@@ -196,7 +196,7 @@
 
 
 /datum/shuttle_destination/shuttle1/sky
-	name = "Skies of Sif"
+	name = "Skies of Eridani"
 	my_area = /area/shuttle/shuttle1/sky
 	preferred_interim_area = /area/shuttle/shuttle1/sky_transit
 
@@ -206,7 +206,7 @@
 	)
 
 /datum/shuttle_destination/shuttle2/sky
-	name = "Skies of Sif"
+	name = "Skies of Eridani"
 	my_area = /area/shuttle/shuttle2/sky
 	preferred_interim_area = /area/shuttle/shuttle2/sky_transit
 

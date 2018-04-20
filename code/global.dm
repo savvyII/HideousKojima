@@ -36,9 +36,9 @@ var/href_logfile		= null
 // var/const/company_short	= "NT"
 // var/const/star_name		= "Vir"
 // var/const/starsys_name	= "Vir"
-var/const/game_version	= "Polaris"
+var/const/game_version	= "Eridani"
 var/changelog_hash		= ""
-var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544)
+var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 600)
 var/round_progressing = 1
 
 var/master_mode       = "extended" // "extended"

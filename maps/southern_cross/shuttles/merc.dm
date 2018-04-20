@@ -61,7 +61,7 @@
 	)
 
 /datum/shuttle_destination/syndie/orbit
-	name = "Orbit of Sif"
+	name = "Orbit of Eridani"
 	my_area = /area/syndicate_station/orbit
 	preferred_interim_area = /area/syndicate_station/transit
 
@@ -73,7 +73,7 @@
 	)
 
 /datum/shuttle_destination/syndie/outside_SC_1d
-	name = "NLS Southern Cross - Fore Port of First Deck"
+	name = "NTTRS Caerus - Fore Port of First Deck"
 	my_area = /area/syndicate_station/firstdeck
 	preferred_interim_area = /area/syndicate_station/transit
 
@@ -84,7 +84,7 @@
 	)
 
 /datum/shuttle_destination/syndie/outside_SC_2d
-	name = "NLS Southern Cross - Fore Starboard of Second Deck"
+	name = "NTTRS Caerus - Fore Starboard of Second Deck"
 	my_area = /area/syndicate_station/seconddeck
 	preferred_interim_area = /area/syndicate_station/transit
 
@@ -95,7 +95,7 @@
 	)
 
 /datum/shuttle_destination/syndie/outside_SC_3d
-	name = "NLS Southern Cross - Aft Starboard of Third Deck"
+	name = "NTTRS Caerus - Aft Starboard of Third Deck"
 	my_area = /area/syndicate_station/thirddeck
 	preferred_interim_area = /area/syndicate_station/transit
 
@@ -106,12 +106,12 @@
 	)
 
 /datum/shuttle_destination/syndie/docked_SC
-	name = "NLS Southern Cross - Arrivals Docking Port"
+	name = "NTTRS Caerus - Arrivals Docking Port"
 	my_area = /area/syndicate_station/arrivals_dock
 	preferred_interim_area = /area/syndicate_station/transit
 
 	dock_target = "nuke_shuttle_dock_airlock"
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Caerus Docking Computer"
 
 /datum/shuttle_destination/syndie/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
@@ -129,6 +129,6 @@
 	)
 
 /datum/shuttle_destination/syndie/planet
-	name = "Sif Surface"
+	name = "Eridani Surface"
 	my_area = /area/syndicate_station/planet
 	preferred_interim_area = /area/syndicate_station/sky_transit
