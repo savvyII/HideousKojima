@@ -1,11 +1,11 @@
 // Alien clothing.
 /datum/gear/suit/zhan_furs
-	display_name = "Zhan-Khazan furs (Tajaran)"
+	display_name = "Naj'Dii furs (Tajaran)"
 	path = /obj/item/clothing/suit/tajaran/furs
 	sort_category = "Xenowear"
 
 /datum/gear/head/zhan_scarf
-	display_name = "Zhan headscarf"
+	display_name = "Akmar headscarf"
 	path = /obj/item/clothing/head/tajaran/scarf
 	whitelisted = SPECIES_TAJ
 

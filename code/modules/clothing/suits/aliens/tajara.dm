@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/tajaran/furs
 	name = "heavy furs"
-	desc = "A traditional Zhan-Khazan garment."
+	desc = "A traditional Naj'Dii garment."
 	icon_state = "zhan_furs"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER
