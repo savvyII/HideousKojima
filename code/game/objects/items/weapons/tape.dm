@@ -33,7 +33,9 @@
 				if(H.head && (H.head.body_parts_covered & FACE))
 					user << "<span class='warning'>Remove their [H.head] first.</span>"
 					return
+				playsound(src, 'sound/effects/tape.ogg',25)
 				user.visible_message("<span class='danger'>\The [user] begins taping over \the [H]'s eyes!</span>")
+
 
 				if(!do_after(user, 30))
 					return
@@ -70,6 +72,7 @@
 				if(H.head && (H.head.body_parts_covered & FACE))
 					user << "<span class='warning'>Remove their [H.head] first.</span>"
 					return
+				playsound(src, 'sound/effects/tape.ogg',25)
 				user.visible_message("<span class='danger'>\The [user] begins taping up \the [H]'s mouth!</span>")
 
 				if(!do_after(user, 30))
