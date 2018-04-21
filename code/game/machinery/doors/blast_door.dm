@@ -22,6 +22,8 @@
 	var/icon_state_opening = null
 	var/icon_state_closed = null
 	var/icon_state_closing = null
+	var/open_sound = 'sound/machines/blastdoor_open.ogg'
+	var/close_sound = 'sound/machines/blastdoor_close.ogg'
 
 	closed_layer = 3.3 // Above airlocks when closed
 	var/id = 1.0
@@ -68,6 +70,7 @@
 // Description: Opens the door. No checks are done inside this proc.
 /obj/machinery/door/blast/proc/force_open()
 	src.operating = 1
+	playsound(src.loc, open_sound, 100, 1)
 	flick(icon_state_opening, src)
 	src.density = 0
 	update_nearby_tiles()
@@ -82,6 +85,7 @@
 // Description: Closes the door. No checks are done inside this proc.
 /obj/machinery/door/blast/proc/force_close()
 	src.operating = 1
+	playsound(src.loc, close_sound, 100, 1)
 	src.layer = closed_layer
 	flick(icon_state_closing, src)
 	src.density = 1
@@ -289,3 +293,5 @@ obj/machinery/door/blast/regular/open
 	icon_state_closed = "shutter1"
 	icon_state_closing = "shutterc1"
 	icon_state = "shutter1"
+	open_sound = 'sound/machines/shutters_open.ogg'
+	close_sound = 'sound/machines/shutters_close.ogg'
