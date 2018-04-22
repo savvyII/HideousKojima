@@ -4,7 +4,7 @@
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blob_shield"
 	desc = "A solid wall of slightly twitching tendrils."
-	max_integrity = 100
+	max_integrity = 45
 	point_return = 4
 
 /obj/structure/blob/shield/core

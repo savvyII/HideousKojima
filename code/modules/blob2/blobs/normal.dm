@@ -3,8 +3,8 @@
 	base_name = "blob"
 	icon_state = "blob"
 	light_range = 0
-	integrity = 21 //doesn't start at full health
-	max_integrity = 25
+	integrity = 14 //doesn't start at full health
+	max_integrity = 20
 	health_regen = 1
 
 /obj/structure/blob/normal/update_icon()

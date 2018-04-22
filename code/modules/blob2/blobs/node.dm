@@ -5,8 +5,8 @@ var/list/blob_nodes = list()
 	base_name = "node"
 	icon_state = "blank_blob"
 	desc = "A large, pulsating yellow mass."
-	max_integrity = 50
-	health_regen = 3
+	max_integrity = 25
+	health_regen = 2
 	point_return = 50
 
 /obj/structure/blob/node/New(var/newloc)
