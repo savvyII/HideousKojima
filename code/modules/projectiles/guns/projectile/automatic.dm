@@ -350,17 +350,17 @@
 
 /obj/item/weapon/gun/projectile/automatic/p90
 	name = "personal defense weapon"
-	desc = "The H90K is a compact, large capacity submachine gun produced by Frontier Armament Company. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
+	desc = "The FAC P90 is a compact, large capacity submachine gun produced by Frontier Armament Company. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
 	icon_state = "p90smg"
 	item_state = "p90"
 	w_class = ITEMSIZE_NORMAL
-	caliber = "9mm"
+	caliber = "5.7x28mm"
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT // ToDo: Belt sprite.
-	fire_sound = 'sound/weapons/Gunshot_light.ogg'
+	fire_sound = 'sound/weapons/p90.ogg'
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/m9mmp90
-	allowed_magazines = list(/obj/item/ammo_magazine/m9mmp90, /obj/item/ammo_magazine/m9mmt) // ToDo: New sprite for the different mag.
+	magazine_type = /obj/item/ammo_magazine/m57smg
+	allowed_magazines = list(/obj/item/ammo_magazine/m57smg) // ToDo: New sprite for the different mag.
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0),

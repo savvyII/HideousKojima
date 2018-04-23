@@ -411,3 +411,27 @@
 		icon_state = "olivawcivil"
 	else
 		icon_state = "olivawcivil_empty"
+
+/obj/item/weapon/gun/projectile/fiveseven
+	name = "KPM FN-57"
+	desc = "Another classic retooled and redone by Kusanagi Precision machinery. Commonly seen in use with major police forces and comes with a tactical light installed. Uses 5.7x28mm rounds."
+	icon_state = "fiveseven"
+	caliber = "5.7x28mm"
+	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/fiveseven.ogg'
+	magazine_type = /obj/item/ammo_magazine/m57
+	allowed_magazines = list(/obj/item/ammo_magazine/m57) // Can accept illegal large capacity magazines, or compact magazines.
+	can_flashlight = TRUE
+
+/obj/item/weapon/gun/projectile/fiveseven/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]-e"
+
+	if(can_flashlight & gun_light)
+		var/mutable_appearance/flashlight_overlay = mutable_appearance(icon, light_state)
+		flashlight_overlay.pixel_x = flight_x_offset
+		flashlight_overlay.pixel_y = flight_y_offset
+		overlays += flashlight_overlay

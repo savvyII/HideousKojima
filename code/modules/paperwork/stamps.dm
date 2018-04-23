@@ -69,6 +69,10 @@
 	name = "\improper Sol Government rubber stamp"
 	icon_state = "stamp-sg"
 
+/obj/item/weapon/stamp/ice
+	name = "\improper ETF Internal Corporate Enforcement stamp"
+	icon_state = "stamp-sg"
+
 
 // Syndicate stamp to forge documents.
 /obj/item/weapon/stamp/chameleon/attack_self(mob/user as mob)

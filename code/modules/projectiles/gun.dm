@@ -91,6 +91,31 @@
 	var/obj/item/dnalockingchip/attached_lock
 
 	var/last_shot = 0			//records the last shot fired
+
+	var/can_flashlight = FALSE
+	var/gun_light = FALSE
+	var/light_state = "flight"
+	var/light_brightness = 4
+	var/flight_x_offset = 0
+	var/flight_y_offset = 0
+
+/obj/item/weapon/gun/CtrlClick(mob/user)
+	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
+		toggle_flashlight()
+	else
+		return ..()
+
+/obj/item/weapon/gun/proc/toggle_flashlight()
+	if(gun_light)
+		set_light(0)
+		gun_light = FALSE
+	else
+		set_light(light_brightness)
+		gun_light = TRUE
+
+	playsound(src, 'sound/machines/button.ogg', 25)
+	update_icon()
+
 /obj/item/weapon/gun/New()
 	..()
 	for(var/i in 1 to firemodes.len)
@@ -400,7 +425,11 @@
 	accuracy = initial(accuracy)	//Reset the gun's accuracy
 
 	if(muzzle_flash)
-		set_light(0)
+		if(gun_light)
+			set_light(light_brightness)
+		else
+			set_light(0)
+
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/weapon/gun/proc/Fire_userless(atom/target)

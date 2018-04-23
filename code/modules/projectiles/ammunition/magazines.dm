@@ -284,19 +284,6 @@
 	name = "top mounted magazine (9mm practice)"
 	ammo_type = /obj/item/ammo_casing/a9mmp
 
-/obj/item/ammo_magazine/m9mmp90
-	name = "large capacity top mounted magazine (9mm armor-piercing)"
-	icon_state = "p90"
-	mag_type = MAGAZINE
-	ammo_type = /obj/item/ammo_casing/a9mm/ap
-	matter = list(DEFAULT_WALL_MATERIAL = 3000)
-	caliber = "9mm"
-	max_ammo = 50
-	multiple_sprites = 1
-
-/obj/item/ammo_magazine/m9mmp90/empty
-	initial_ammo = 0
-
 /obj/item/ammo_magazine/clip/c9mm
 	name = "ammo clip (9mm)"
 	icon_state = "clip_pistol"
@@ -733,3 +720,49 @@
 	ammo_type = /obj/item/ammo_casing/a380
 	max_ammo = 8
 	multiple_sprites = 1
+
+// 5.7x28mm //
+/obj/item/ammo_magazine/m57smg
+	name = "top mounted magazine (5.7x28mm)"
+	icon_state = "p90"
+	mag_type = MAGAZINE
+	ammo_type = /obj/item/ammo_casing/a57
+	matter = list(DEFAULT_WALL_MATERIAL = 3000)
+	caliber = "5.7x28mm"
+	max_ammo = 50
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/m57smg/ap
+	name = "top mounted magazine (5.7x28mm armour piercing)"
+	ammo_type = /obj/item/ammo_casing/a57/ap
+
+/obj/item/ammo_magazine/m57smg/hp
+	name = "top mounted magazine (5.7x28mm hollow point)"
+	ammo_type = /obj/item/ammo_casing/a57/hp
+
+/obj/item/ammo_magazine/m57smg/empty
+	initial_ammo = 0
+
+/obj/item/ammo_magazine/m57
+	name = "pistol magazine (5.7x28mm)"
+	icon_state = "57"
+	mag_type = MAGAZINE
+	ammo_type = /obj/item/ammo_casing/a57
+	matter = list(DEFAULT_WALL_MATERIAL = 525) //metal costs are very roughly based around 1 .45 casing = 75 metal
+	caliber = "5.7x28mm"
+	max_ammo = 20
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/m57/empty
+	initial_ammo = 0
+
+/obj/item/ammo_magazine/m57/ap
+	name = "pistol magazine (5.7x28mm armour piercing)"
+	ammo_type = /obj/item/ammo_casing/a57/ap
+
+/obj/item/ammo_magazine/m57/hp
+	name = "pistol magazine (5.7x28mm hollow point)"
+	ammo_type = /obj/item/ammo_casing/a57/hp
+
+
+

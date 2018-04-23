@@ -327,6 +327,21 @@
 	caliber = ".380"
 	projectile_type = /obj/item/projectile/bullet/pistol
 
+/*
+ * 5.7x28mm
+ */
+/obj/item/ammo_casing/a57
+	desc = "A 5.7x28mm bullet casing."
+	caliber = "5.7x28mm"
+	projectile_type = /obj/item/projectile/bullet/pistol/medium
+
+/obj/item/ammo_casing/a57/ap
+	desc = "A 5.7x28 armor piercing casing."
+	projectile_type = /obj/item/projectile/bullet/pistol/medium/ap
+
+/obj/item/ammo_casing/a57/hp
+	desc = "A 5.7x28 hollow point casing."
+	projectile_type = /obj/item/projectile/bullet/pistol/medium/hollow
 
 /*
  * Misc
