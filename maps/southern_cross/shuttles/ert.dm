@@ -54,7 +54,7 @@
 	)
 
 /datum/shuttle_destination/ert/orbit
-	name = "Orbit of Sif"
+	name = "Orbit of Eridani"
 	my_area = /area/shuttle/response_ship/orbit
 	preferred_interim_area = /area/shuttle/response_ship/transit
 
@@ -66,7 +66,7 @@
 	)
 
 /datum/shuttle_destination/ert/outside_SC_1d
-	name = "NLS Southern Cross - Fore Port of First Deck"
+	name = "NTTRS Caerus - Fore Port of First Deck"
 	my_area = /area/shuttle/response_ship/firstdeck
 	preferred_interim_area = /area/shuttle/response_ship/transit
 
@@ -78,7 +78,7 @@
 
 
 /datum/shuttle_destination/ert/outside_SC_2d
-	name = "NLS Southern Cross - Aft Starboard of Second Deck"
+	name = "NTTRS Caerus - Aft Starboard of Second Deck"
 	my_area = /area/shuttle/response_ship/seconddeck
 	preferred_interim_area = /area/shuttle/response_ship/transit
 
@@ -89,7 +89,7 @@
 	)
 
 /datum/shuttle_destination/ert/outside_SC_3d
-	name = "NLS Southern Cross - Aft Starboard of Third Deck"
+	name = "NTTRS Caerus - Aft Starboard of Third Deck"
 	my_area = /area/shuttle/response_ship/thirddeck
 	preferred_interim_area = /area/shuttle/response_ship/transit
 
@@ -100,12 +100,12 @@
 	)
 
 /datum/shuttle_destination/ert/docked_SC
-	name = "NLS Southern Cross - Arrivals Docking Port"
+	name = "NTTRS Caerus - Arrivals Docking Port"
 	my_area = /area/shuttle/response_ship/arrivals_dock
 	preferred_interim_area = /area/shuttle/response_ship/transit
 
 	dock_target = "response_shuttle_dock_airlock"
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Caerus Docking Computer"
 
 /datum/shuttle_destination/ert/docked_SC/get_arrival_message()
 	return "Attention, the Emergency Response Team's shuttle has arrived to the Arrivals Dock."
@@ -114,7 +114,7 @@
 	return "Attention, the Emergency Response Team's shuttle has departed the Arrivals Dock."
 
 /datum/shuttle_destination/ert/sky
-	name = "Skies of Sif"
+	name = "Skies of Eridani"
 	my_area = /area/shuttle/response_ship/sky
 	preferred_interim_area = /area/shuttle/response_ship/sky_transit
 
@@ -123,6 +123,6 @@
 	)
 
 /datum/shuttle_destination/ert/planet
-	name = "Sif Surface"
+	name = "Eridani Surface"
 	my_area = /area/shuttle/response_ship/planet
 	preferred_interim_area = /area/shuttle/response_ship/sky_transit

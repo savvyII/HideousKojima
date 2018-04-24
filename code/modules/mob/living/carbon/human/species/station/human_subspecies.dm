@@ -31,7 +31,7 @@
 	brute_mod = 1.1
 	burn_mod =  1.1
 */
-
+/*
 /datum/species/human/vatgrown
 	name = SPECIES_HUMAN_VATBORN
 	name_plural = "Vatborn"
@@ -50,7 +50,7 @@
 		O_BRAIN =    /obj/item/organ/internal/brain,
 		O_EYES =     /obj/item/organ/internal/eyes
 		)
-
+*/
 /*
 // These guys are going to need full resprites of all the suits/etc so I'm going to
 // define them and commit the sprites, but leave the clothing for another day.

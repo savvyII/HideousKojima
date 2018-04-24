@@ -2,13 +2,13 @@
 	name = "curtain"
 	icon = 'icons/obj/curtain.dmi'
 	icon_state = "closed"
-	layer = SHOWER_OPEN_LAYER
+	layer = 4.2
 	opacity = 1
 	density = 0
 
 /obj/structure/curtain/open
 	icon_state = "open"
-	layer = SHOWER_CLOSED_LAYER
+	layer = 3.4
 	opacity = 0
 
 /obj/structure/curtain/bullet_act(obj/item/projectile/P, def_zone)
@@ -27,10 +27,10 @@
 	set_opacity(!opacity)
 	if(opacity)
 		icon_state = "closed"
-		layer = SHOWER_CLOSED_LAYER
+		layer = 4.2
 	else
 		icon_state = "open"
-		layer = SHOWER_OPEN_LAYER
+		layer = 3.4
 
 /obj/structure/curtain/attackby(obj/item/P, mob/user)
 	if(istype(P, /obj/item/weapon/wirecutters))

@@ -30,7 +30,7 @@
 	)
 
 /datum/shuttle_destination/heist/orbit
-	name = "Orbit of Sif"
+	name = "Orbit of Eridani"
 	my_area = /area/skipjack_station/orbit
 	preferred_interim_area = /area/skipjack_station/transit
 
@@ -42,7 +42,7 @@
 	)
 
 /datum/shuttle_destination/heist/outside_SC_1d
-	name = "NLS Southern Cross - Aft of First Deck"
+	name = "NTTRS Caerus - Aft of First Deck"
 	my_area = /area/skipjack_station/firstdeck
 	preferred_interim_area = /area/skipjack_station/transit
 
@@ -53,7 +53,7 @@
 	)
 
 /datum/shuttle_destination/heist/outside_SC_2d
-	name = "NLS Southern Cross - Fore of Second Deck"
+	name = "NTTRS Caerus - Fore of Second Deck"
 	my_area = /area/skipjack_station/seconddeck
 	preferred_interim_area = /area/skipjack_station/transit
 
@@ -64,7 +64,7 @@
 	)
 
 /datum/shuttle_destination/heist/outside_SC_3d
-	name = "NLS Southern Cross - Starboard of Third Deck"
+	name = "NTTRS Caerus - Starboard of Third Deck"
 	my_area = /area/skipjack_station/thirddeck
 	preferred_interim_area = /area/skipjack_station/transit
 
@@ -76,12 +76,12 @@
 
 
 /datum/shuttle_destination/heist/docked_SC
-	name = "NLS Southern Cross - Arrivals Docking Port"
+	name = "NTTRS Caerus - Arrivals Docking Port"
 	my_area = /area/skipjack_station/arrivals_dock
 	preferred_interim_area = /area/skipjack_station/transit
 
 //	dock_target = "skipjack_shuttle_dock_airlock"
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Caerus Docking Computer"
 
 /datum/shuttle_destination/heist/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
@@ -90,7 +90,7 @@
 	return "Attention, [master.my_shuttle.visible_name] has departed the Arrivals Dock."
 
 /datum/shuttle_destination/heist/sky
-	name = "Skies of Sif"
+	name = "Skies of Eridani"
 	my_area = /area/skipjack_station/sky
 	preferred_interim_area = /area/skipjack_station/sky_transit
 
@@ -99,6 +99,6 @@
 	)
 
 /datum/shuttle_destination/heist/planet
-	name = "Sif Surface"
+	name = "Eridani Surface"
 	my_area = /area/skipjack_station/planet
 	preferred_interim_area = /area/skipjack_station/sky_transit

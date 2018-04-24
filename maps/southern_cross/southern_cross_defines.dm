@@ -12,8 +12,8 @@
 #define Z_LEVEL_SURFACE_WILD			10
 
 /datum/map/southern_cross
-	name = "Southern Cross"
-	full_name = "Southern Cross"
+	name = "Epsilon Eridani"
+	full_name = "Epsilon Eridani"
 	path = "southern_cross"
 
 	lobby_icon = 'icons/misc/title.dmi'
@@ -21,14 +21,14 @@
 
 	zlevel_datum_type = /datum/map_z_level/southern_cross
 
-	station_name  = "NLS Southern Cross"
-	station_short = "Southern Cross"
-	dock_name     = "NCS Northern Star" // Now we're the centcom!
+	station_name  = "NTTRS Caerus"
+	station_short = "Caerus"
+	dock_name     = "NTCS Eridani" // Now we're the centcom!
 	boss_name     = "Central Command"
 	boss_short    = "Centcom"
 	company_name  = "NanoTrasen"
 	company_short = "NT"
-	starsys_name  = "Vir"
+	starsys_name  = "Epsilon Eridani"
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
