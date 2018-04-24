@@ -236,7 +236,7 @@
 /datum/access/lawyer
 	id = access_lawyer
 	desc = "Internal Affairs"
-	region = ACCESS_REGION_COMMAND
+	region = ACCESS_REGION_SECURITY
 
 /var/const/access_virology = 39
 /datum/access/virology

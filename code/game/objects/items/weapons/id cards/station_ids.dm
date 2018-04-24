@@ -256,15 +256,20 @@
 	rank = "Security Officer"
 	job_access_type = /datum/job/officer
 
-/obj/item/weapon/card/id/security/detective
-	assignment = "Detective"
-	rank = "Detective"
-	job_access_type = /datum/job/detective
+/obj/item/weapon/card/id/security/ice
+	assignment = "ICE Agent"
+	rank = "ICE Agent"
+	job_access_type = /datum/job/police
 
 /obj/item/weapon/card/id/security/warden
 	assignment = "Warden"
 	rank = "Warden"
 	job_access_type = /datum/job/warden
+
+/obj/item/weapon/card/id/security/internal_affairs_agent
+	assignment = "Internal Affairs Agent"
+	rank = "Internal Affairs Agent"
+	job_access_type = /datum/job/lawyer
 
 /obj/item/weapon/card/id/security/head
 	name = "identification card"
@@ -396,11 +401,6 @@
 	assignment = "Chef"
 	rank = "Chef"
 	job_access_type = /datum/job/chef
-
-/obj/item/weapon/card/id/civilian/internal_affairs_agent
-	assignment = "Internal Affairs Agent"
-	rank = "Internal Affairs Agent"
-	job_access_type = /datum/job/lawyer
 
 /obj/item/weapon/card/id/civilian/janitor
 	assignment = "Janitor"

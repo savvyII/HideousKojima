@@ -266,37 +266,75 @@
 
 
 /obj/structure/closet/secure_closet/detective
-	name = "detective's cabinet"
-	req_access = list(access_forensics_lockers)
-	icon_state = "cabinetdetective_locked"
-	icon_closed = "cabinetdetective"
-	icon_locked = "cabinetdetective_locked"
-	icon_opened = "cabinetdetective_open"
-	icon_broken = "cabinetdetective_broken"
-	icon_off = "cabinetdetective_broken"
+	name = "internal affair's cabinet"
+	req_access = list(access_lawyer)
 
 	New()
 		..()
 		new /obj/item/clothing/accessory/badge/holo/detective(src)
 		new /obj/item/clothing/gloves/black(src)
 		new /obj/item/weapon/gun/projectile/colt(src)
-		new /obj/item/weapon/storage/belt/detective(src)
+		new /obj/item/weapon/storage/belt/security(src)
 		new /obj/item/weapon/storage/box/evidence(src)
-		new /obj/item/device/radio/headset/headset_sec(src)
-		new /obj/item/device/radio/headset/headset_sec/alt(src)
-		new /obj/item/clothing/suit/armor/pcarrier/security/detective(src)
+		new /obj/item/clothing/suit/armor/pcarrier/security(src)
 		new /obj/item/taperoll/police(src)
 		new /obj/item/clothing/accessory/holster/armpit(src)
 		new /obj/item/device/flashlight/maglight(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/flask/detflask(src)
-		new /obj/item/weapon/storage/briefcase/crimekit(src)
 		new /obj/item/device/taperecorder(src)
 		new /obj/item/device/tape/random(src)
 		new /obj/item/device/tape/random(src)
 		new /obj/item/device/tape/random(src)
+		new /obj/item/clothing/glasses/sunglasses/sechud(src)
+		new /obj/item/device/flash(src)
+		new /obj/item/weapon/melee/telebaton(src)
+		new /obj/item/device/radio/headset/ia(src)
+		new /obj/item/weapon/handcuffs(src)
+		new /obj/item/weapon/handcuffs(src)
 		return
 
 /obj/structure/closet/secure_closet/detective/update_icon()
+	if(broken)
+		icon_state = icon_broken
+	else
+		if(!opened)
+			if(locked)
+				icon_state = icon_locked
+			else
+				icon_state = icon_closed
+		else
+			icon_state = icon_opened
+
+/obj/structure/closet/secure_closet/police
+	name = "ICE Agent locker"
+	req_access = list(access_forensics_lockers)
+
+	New()
+		..()
+		new /obj/item/clothing/gloves/black(src)
+		new /obj/item/weapon/storage/belt/security(src)
+		new /obj/item/weapon/storage/box/evidence(src)
+		new /obj/item/device/radio/headset/ice(src)
+		new /obj/item/device/radio/headset/ice/alt(src)
+		new /obj/item/taperoll/police(src)
+		new /obj/item/clothing/accessory/holster/leg(src)
+		new /obj/item/device/flashlight/maglight(src)
+		new /obj/item/device/taperecorder(src)
+		new /obj/item/device/tape/random(src)
+		new /obj/item/device/tape/random(src)
+		new /obj/item/device/tape/random(src)
+		new /obj/item/weapon/melee/telebaton(src)
+		new /obj/item/device/flash(src)
+		new /obj/item/weapon/grenade/flashbang(src)
+		new /obj/item/clothing/glasses/sunglasses/sechud(src)
+		new /obj/item/weapon/reagent_containers/spray/pepper(src)
+		new /obj/item/ammo_magazine/m57(src)
+		new /obj/item/ammo_magazine/m57/hp(src)
+		new /obj/item/clothing/suit/armor/pcarrier/police(src)
+		new /obj/item/weapon/handcuffs(src)
+		new /obj/item/weapon/handcuffs(src)
+		return
+
+/obj/structure/closet/secure_closet/police/update_icon()
 	if(broken)
 		icon_state = icon_broken
 	else

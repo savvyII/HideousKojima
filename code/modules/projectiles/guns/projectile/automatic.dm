@@ -349,7 +349,7 @@
 		icon_state = "mini-uzi-empty"
 
 /obj/item/weapon/gun/projectile/automatic/p90
-	name = "personal defense weapon"
+	name = "FAC FN-P90"
 	desc = "The FAC P90 is a compact, large capacity submachine gun produced by Frontier Armament Company. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
 	icon_state = "p90smg"
 	item_state = "p90"

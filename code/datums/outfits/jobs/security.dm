@@ -23,6 +23,7 @@
 	id_type = /obj/item/weapon/card/id/security/warden
 	pda_type = /obj/item/device/pda/warden
 
+/*
 /decl/hierarchy/outfit/job/security/detective
 	name = OUTFIT_JOB_NAME("Detective")
 	head = /obj/item/clothing/head/det
@@ -41,6 +42,7 @@
 	name = OUTFIT_JOB_NAME("Forensic technician")
 	head = null
 	suit = /obj/item/clothing/suit/storage/forensics/blue
+*/
 
 /decl/hierarchy/outfit/job/security/officer
 	name = OUTFIT_JOB_NAME("Security Officer")
@@ -48,3 +50,26 @@
 	l_pocket = /obj/item/device/flash
 	id_type = /obj/item/weapon/card/id/security/officer
 	pda_type = /obj/item/device/pda/security
+
+/decl/hierarchy/outfit/job/security/internal_affairs_agent
+	name = OUTFIT_JOB_NAME("Internal affairs agent")
+	l_ear = /obj/item/device/radio/headset/ia
+	uniform = /obj/item/clothing/under/rank/internalaffairs
+	suit = /obj/item/clothing/suit/storage/toggle/internalaffairs
+	shoes = /obj/item/clothing/shoes/brown
+	glasses = /obj/item/clothing/glasses/sunglasses/big
+	l_hand = /obj/item/weapon/clipboard
+	id_type = /obj/item/weapon/card/id/security/internal_affairs_agent
+	pda_type = /obj/item/device/pda/lawyer
+	l_pocket = /obj/item/device/flash
+
+/decl/hierarchy/outfit/job/security/police
+	name = OUTFIT_JOB_NAME("ICE Agent")
+	uniform = /obj/item/clothing/under/pants/classicjeans
+	l_ear = /obj/item/device/radio/headset/ice
+	l_pocket = /obj/item/clothing/accessory/badge/holo/police
+	r_pocket = /obj/item/ammo_magazine/m57
+	satchel_one = /obj/item/weapon/storage/backpack/satchel/norm
+	id_type = /obj/item/weapon/card/id/security/ice
+	pda_type = /obj/item/device/pda/security
+	backpack_contents = list(/obj/item/weapon/gun/projectile/fiveseven = 1, /obj/item/weapon/handcuffs = 1)

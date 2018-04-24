@@ -4,13 +4,14 @@ var/const/ENGSEC			=(1<<0)
 var/const/CAPTAIN			=(1<<0)
 var/const/HOS				=(1<<1)
 var/const/WARDEN			=(1<<2)
-var/const/DETECTIVE			=(1<<3)
+var/const/LAWYER			=(1<<3)
 var/const/OFFICER			=(1<<4)
-var/const/CHIEF				=(1<<5)
-var/const/ENGINEER			=(1<<6)
-var/const/ATMOSTECH			=(1<<7)
-var/const/AI				=(1<<8)
-var/const/CYBORG			=(1<<9)
+var/const/POLICE			=(1<<5)
+var/const/CHIEF				=(1<<6)
+var/const/ENGINEER			=(1<<7)
+var/const/ATMOSTECH			=(1<<8)
+var/const/AI				=(1<<9)
+var/const/CYBORG			=(1<<10)
 
 
 var/const/MEDSCI			=(1<<1)
@@ -38,10 +39,9 @@ var/const/LIBRARIAN			=(1<<5)
 var/const/QUARTERMASTER		=(1<<6)
 var/const/CARGOTECH			=(1<<7)
 var/const/MINER				=(1<<8)
-var/const/LAWYER			=(1<<9)
-var/const/CHAPLAIN			=(1<<10)
-var/const/ASSISTANT			=(1<<11)
-var/const/BRIDGE			=(1<<12)
+var/const/CHAPLAIN			=(1<<9)
+var/const/ASSISTANT			=(1<<10)
+var/const/BRIDGE			=(1<<11)
 
 
 var/list/assistant_occupations = list(
@@ -100,7 +100,6 @@ var/list/civilian_positions = list(
 	"Chef",
 	"Janitor",
 	"Librarian",
-	"Lawyer",
 	"Chaplain",
 	"Assistant"
 )
@@ -110,7 +109,9 @@ var/list/security_positions = list(
 	"Head of Security",
 	"Warden",
 	"Detective",
-	"Security Officer"
+	"Security Officer",
+	"Lawyer",
+	"ICE Agent"
 )
 
 

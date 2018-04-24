@@ -555,3 +555,8 @@
 	desc = "A lightweight tactical plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
 	icon_state = "pcarrier_swat"
 	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/swat, /obj/item/clothing/accessory/storage/pouches/large/tan, /obj/item/clothing/accessory/)
+
+/obj/item/clothing/suit/armor/pcarrier/police
+	name = "police plate carrier"
+	desc = "A standard issue plate carrier for all ETF federal law enforcement agents."
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security/heavy, /obj/item/clothing/accessory/armor/tag/police, /obj/item/clothing/accessory/storage/pouches/large)

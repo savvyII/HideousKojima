@@ -309,6 +309,18 @@
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/hos
 
+/obj/item/device/radio/headset/ice
+	name = "ice agent radio headset"
+	desc = "The headset of your boss's boss's boss."
+	icon_state = "com_headset"
+	ks2type = /obj/item/device/encryptionkey/ert
+
+/obj/item/device/radio/headset/ice/alt
+	name = "ice agent bowman headset"
+	desc = "The headset of your boss's boss's boss."
+	icon_state = "com_headset_alt"
+	ks2type = /obj/item/device/encryptionkey/police
+
 /obj/item/device/radio/headset/mmi_radio
 	name = "brain-integrated radio"
 	desc = "MMIs and synthetic brains are often equipped with these."

@@ -142,29 +142,3 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/librarian
 	alt_titles = list("Journalist", "Writer")
-
-//var/global/lawyer = 0//Checks for another lawyer //This changed clothes on 2nd lawyer, both IA get the same dreds.
-/datum/job/lawyer
-	title = "Internal Affairs Agent"
-	flag = LAWYER
-	department = "Civilian"
-	department_flag = CIVILIAN
-	faction = "Station"
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "company officials and Corporate Regulations"
-	selection_color = "#515151"
-	idtype = /obj/item/weapon/card/id/civilian/internal_affairs_agent
-	economic_modifier = 7
-	access = list(access_lawyer, access_sec_doors, access_maint_tunnels, access_heads)
-	minimal_access = list(access_lawyer, access_sec_doors, access_heads)
-	minimal_player_age = 7
-
-	outfit_type = /decl/hierarchy/outfit/job/internal_affairs_agent
-
-/*
-/datum/job/lawyer/equip(var/mob/living/carbon/human/H)
-	. = ..()
-	if(.)
-		H.implant_loyalty(H)
-*/

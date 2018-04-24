@@ -129,9 +129,17 @@
 	slot_flags = SLOT_TIE | SLOT_BELT
 
 /obj/item/clothing/accessory/badge/holo/detective
-	name = "detective's holobadge"
-	desc = "An immaculately polished gold security badge on leather. Labeled 'Detective.'"
+	name = "internal affairs agent's holobadge"
+	desc = "An immaculately polished gold security badge on leather. Labeled 'IA Agent.'"
 	icon_state = "marshalbadge"
+	badge_string = "Corporate Internal Affairs"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/holo/police
+	name = "ICE agent's holobadge"
+	icon_state = "badge"
+	desc = "An immaculately polished gold police badge. Labeled 'ETF Federal Law Enforcement, Internal Corporate Enforcement.'"
+	badge_string = "ETF ICE Agent, Law Enforcement"
 	slot_flags = SLOT_TIE | SLOT_BELT
 
 /obj/item/weapon/storage/box/holobadge/hos

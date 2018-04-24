@@ -273,9 +273,9 @@
 	desc = "An armor tag with the words CORPORATE SECURITY printed in red lettering on it."
 	icon_state = "nanotag"
 
-/obj/item/clothing/accessory/armor/tag/pcrc
-	name = "\improper PCRC tag"
-	desc = "An armor tag with the words PROXIMA CENTAURI RISK CONTROL printed in cyan lettering on it."
+/obj/item/clothing/accessory/armor/tag/police
+	name = "\improper POLICE tag"
+	desc = "An armor tag with the words POLICE printed in cyan lettering on it."
 	icon_state = "pcrctag"
 
 /obj/item/clothing/accessory/armor/tag/saare
