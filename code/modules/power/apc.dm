@@ -471,6 +471,21 @@
 		else if (opened!=2) //cover isn't removed
 			opened = 0
 			update_icon()
+
+	else if (istype(W, /obj/item/weapon/gripper))//Code for allowing cyborgs to use rechargers
+		var/obj/item/weapon/gripper/Gri = W
+		if(opened && cell)
+			if (Gri.grip_item(cell, user))
+				cell.add_fingerprint(user)
+				cell.update_icon()
+				cell = null
+				user.visible_message("<span class='warning'>[user.name] removes the power cell from [src.name]!</span>",\
+									 "<span class='notice'>You remove the power cell.</span>")
+				//user << "You remove the power cell."
+				charging = 0
+				src.update_icon()
+				return
+
 	else if (istype(W, /obj/item/weapon/crowbar) && !(stat & BROKEN) )
 		if(coverlocked && !(stat & MAINT))
 			to_chat(user,"<span class='warning'>The cover is locked and cannot be opened.</span>")
@@ -489,7 +504,7 @@
 			to_chat(user,"\The [W] is too [W.w_class < 3? "small" : "large"] to work here.")
 			return
 
-		user.drop_item()
+		user.drop_item(src)
 		W.forceMove(src)
 		cell = W
 		user.visible_message(\

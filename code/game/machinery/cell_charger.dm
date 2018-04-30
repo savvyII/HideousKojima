@@ -86,7 +86,7 @@
 		if(!charging)
 			return
 
-		charging.loc = src.loc
+		user.put_in_hands(charging)
 		charging.update_icon()
 		charging = null
 		update_icon()

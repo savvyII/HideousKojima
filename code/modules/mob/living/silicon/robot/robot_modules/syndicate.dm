@@ -160,7 +160,7 @@
 	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
 
 	// General healing.
-	src.modules += new /obj/item/weapon/gripper/medical(src)
+	src.modules += new /obj/item/weapon/gripper/chemistry(src)
 	src.modules += new /obj/item/weapon/shockpaddles/robot/combat(src)
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows borg to fix necrosis apparently
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)

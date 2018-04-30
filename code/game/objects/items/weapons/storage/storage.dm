@@ -333,6 +333,9 @@
 			to_chat(usr, "<span class='notice'>[W] is too long for \the [src].</span>")
 		return 0
 
+	if(!dropsafety(W))
+		return 0
+
 	var/total_storage_space = W.get_storage_cost()
 	for(var/obj/item/I in contents)
 		total_storage_space += I.get_storage_cost() //Adds up the combined w_classes which will be in the storage item if the item is added to it.
@@ -354,7 +357,7 @@
 //such as when picking up all the items on a tile with one click.
 /obj/item/weapon/storage/proc/handle_item_insertion(obj/item/W as obj, prevent_warning = 0)
 	if(!istype(W)) return 0
-	
+
 	if(usr)
 		usr.remove_from_mob(W,target = src) //If given a target, handles forceMove()
 		W.on_enter_storage(src)
@@ -420,8 +423,8 @@
 /obj/item/weapon/storage/attackby(obj/item/W as obj, mob/user as mob)
 	..()
 
-	if(isrobot(user))
-		return //Robots can't interact with storage items.
+	if(!dropsafety(W))
+		return.
 
 	if(istype(W, /obj/item/device/lightreplacer))
 		var/obj/item/device/lightreplacer/LP = W

@@ -463,8 +463,28 @@
 					C.electronics_damage = WC.burn
 
 				usr << "<font color='blue'>You install the [W.name].</font>"
-
+				updateicon()
 				return
+
+	if (istype(W, /obj/item/weapon/gripper))//Code for allowing cyborgs to use rechargers
+		var/obj/item/weapon/gripper/Gri = W
+		if(!wiresexposed)
+			var/datum/robot_component/cell_component = components["power cell"]
+			if(cell)
+
+				if (Gri.grip_item(cell, user))
+					cell.update_icon()
+					cell.add_fingerprint(user)
+					user << "You remove \the [cell]."
+					cell = null
+					cell_component.wrapped = null
+					cell_component.installed = 0
+					updateicon()
+			else if(cell_component.installed == -1)
+				if (Gri.grip_item(cell_component.wrapped, user))
+					cell_component.wrapped = null
+					cell_component.installed = 0
+					user << "You remove \the [cell_component.wrapped]."
 
 	if(istype(W, /obj/item/weapon/aiModule)) // Trying to modify laws locally.
 		if(!opened)
@@ -583,6 +603,7 @@
 			//This will mean that removing and replacing a power cell will repair the mount, but I don't care at this point. ~Z
 			C.brute_damage = 0
 			C.electronics_damage = 0
+			updateicon()
 
 	else if (istype(W, /obj/item/weapon/wirecutters) || istype(W, /obj/item/device/multitool))
 		if (wiresexposed)
@@ -1101,8 +1122,9 @@
 /mob/living/silicon/robot/is_sentient()
 	return braintype != "Drone"
 
-
+/*
 /mob/living/silicon/robot/drop_item()
 	if(module_active && istype(module_active,/obj/item/weapon/gripper))
 		var/obj/item/weapon/gripper/G = module_active
 		G.drop_item_nm()
+*/
