@@ -122,6 +122,7 @@
 	economic_modifier = 8
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks, access_forensics_lockers)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_external_airlocks)
-	minimal_player_age = 999999
+	minimal_player_age = 24
 	outfit_type = /decl/hierarchy/outfit/job/security/police
 	head_position = 1
+	whitelist_only = 1
