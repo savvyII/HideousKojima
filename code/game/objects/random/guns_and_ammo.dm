@@ -67,7 +67,7 @@
 				prob(4);/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
 				prob(3);/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn,
 				prob(3);/obj/item/weapon/gun/projectile/shotgun/pump,
-				prob(2);/obj/item/weapon/gun/projectile/shotgun/pump/combat,
+				prob(2);/obj/item/weapon/gun/projectile/shotgun/semi,
 				prob(4);/obj/item/weapon/gun/projectile/shotgun/pump/rifle,
 				prob(3);/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever,
 				prob(2);/obj/item/weapon/gun/projectile/silenced)
@@ -81,7 +81,7 @@
 /obj/random/projectile/sec/item_to_spawn()
 	return pick(prob(3);/obj/item/weapon/gun/projectile/shotgun/pump,
 				prob(2);/obj/item/weapon/gun/projectile/automatic/wt550,
-				prob(1);/obj/item/weapon/gun/projectile/shotgun/pump/combat)
+				prob(1);/obj/item/weapon/gun/projectile/shotgun/semi)
 
 /obj/random/handgun
 	name = "Random Handgun"

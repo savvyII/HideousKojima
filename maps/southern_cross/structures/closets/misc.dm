@@ -32,11 +32,13 @@
 
 /obj/structure/closet/secure_closet/guncabinet/phase/New()
 	..()
-	new /obj/item/weapon/gun/energy/phasegun(src)
-	new /obj/item/weapon/gun/energy/phasegun(src)
+	new /obj/item/weapon/gun/energy/frontier(src)
+	new /obj/item/weapon/gun/energy/frontier(src)
 	// One spare cell per gun
+/*
 	new /obj/item/weapon/cell/device/weapon(src)
 	new /obj/item/weapon/cell/device/weapon(src)
+*/
 	// One spare gun permit per locker
 	new /obj/item/clothing/accessory/permit/gun/planetside(src)
 

@@ -97,6 +97,7 @@
 	access = list(access_lawyer, access_sec_doors, access_maint_tunnels, access_heads)
 	minimal_access = list(access_lawyer, access_sec_doors, access_heads)
 	minimal_player_age = 7
+	head_position = 1
 
 	outfit_type = /decl/hierarchy/outfit/job/security/internal_affairs_agent
 
@@ -121,5 +122,6 @@
 	economic_modifier = 8
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks, access_forensics_lockers)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_external_airlocks)
-	minimal_player_age = 7
+	minimal_player_age = 999999
 	outfit_type = /decl/hierarchy/outfit/job/security/police
+	head_position = 1

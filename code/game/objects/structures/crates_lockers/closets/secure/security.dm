@@ -332,6 +332,7 @@
 		new /obj/item/clothing/suit/armor/pcarrier/police(src)
 		new /obj/item/weapon/handcuffs(src)
 		new /obj/item/weapon/handcuffs(src)
+		new /obj/item/weapon/gun/energy/taser(src)
 		return
 
 /obj/structure/closet/secure_closet/police/update_icon()

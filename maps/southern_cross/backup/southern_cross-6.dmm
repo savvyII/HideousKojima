@@ -224,7 +224,7 @@
 "ep" = (/obj/structure/table/rack,/obj/item/weapon/gun/projectile/automatic/l6_saw,/obj/item/ammo_magazine/m545saw,/obj/item/ammo_magazine/m545saw,/obj/item/ammo_magazine/m545saw,/obj/item/ammo_magazine/m545saw,/turf/unsimulated/floor{icon_state = "dark"},/area/centcom/specops)
 "eq" = (/obj/structure/table/rack,/obj/item/weapon/shield/energy,/obj/item/weapon/shield/energy,/obj/item/weapon/shield/energy,/obj/item/weapon/shield/energy,/turf/unsimulated/floor{icon_state = "dark"},/area/centcom/specops)
 "er" = (/obj/structure/table/rack,/obj/item/weapon/gun/energy/laser,/obj/item/weapon/gun/energy/laser,/turf/unsimulated/floor{icon_state = "dark"},/area/centcom/specops)
-"es" = (/obj/structure/table/rack,/obj/item/ammo_magazine/m9mmp90,/obj/item/ammo_magazine/m9mmp90,/obj/item/ammo_magazine/m9mmp90,/obj/item/ammo_magazine/m9mmp90,/obj/item/weapon/gun/projectile/automatic/p90,/obj/item/weapon/gun/projectile/automatic/p90,/turf/unsimulated/floor{icon_state = "dark"},/area/centcom/specops)
+"es" = (/obj/structure/table/rack,/obj/item/ammo_magazine/m57smg,/obj/item/ammo_magazine/m57smg,/obj/item/ammo_magazine/m57smg,/obj/item/ammo_magazine/m57smg,/obj/item/weapon/gun/projectile/automatic/p90,/obj/item/weapon/gun/projectile/automatic/p90,/turf/unsimulated/floor{icon_state = "dark"},/area/centcom/specops)
 "et" = (/obj/structure/table/rack,/obj/item/weapon/gun/energy/xray,/obj/item/weapon/gun/energy/xray,/turf/unsimulated/floor{icon_state = "dark"},/area/centcom/specops)
 "eu" = (/turf/unsimulated/floor{icon_state = "plating"; name = "plating"},/area/centcom/specops)
 "ev" = (/obj/machinery/deployable/barrier,/turf/unsimulated/floor{icon_state = "vault"; dir = 5},/area/centcom/specops)

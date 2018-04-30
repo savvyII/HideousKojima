@@ -68,7 +68,7 @@
 	contains = list(
 			/obj/item/weapon/storage/box/shotgunammo,
 			/obj/item/weapon/storage/box/shotgunshells,
-			/obj/item/weapon/gun/projectile/shotgun/pump/combat = 2
+			/obj/item/weapon/gun/projectile/shotgun/semi = 2
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon
