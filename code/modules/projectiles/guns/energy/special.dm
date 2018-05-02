@@ -39,7 +39,7 @@
 //Expedition pistol
 /obj/item/weapon/gun/energy/frontier
 	name = "MK30-EW"
-	desc = "The NT-made Ward-Takahashi MK30-EW is an extraordinarily rugged laser weapon, built to last and requiring effectively no maintenance. Includes a built-in crank charger for recharging away from civilization."
+	desc = "The NT-made Ward-Takahashi MK30-EW is an extraordinarily rugged laser weapon, built to last and requiring effectively no maintenance. Has unique capacitor cooling technology to allow for use away from civilization."
 	icon_state = "phaser"
 	fire_sound = 'sound/weapons/phaser.ogg'
 	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_POWER = 4)
@@ -59,8 +59,8 @@
 		return
 	recharging = 1
 	update_icon()
-	user.visible_message("<span class='notice'>[user] hits the side of \the [src] and cools the weapon down.</span>", \
-						"<span class='notice'>You hit the side of\the [src] and start cooling the weapon down.</span>")
+	user.visible_message("<span class='notice'>[user] hits the side of the [src] and cools the weapon down.</span>", \
+						"<span class='notice'>You hit the side of the [src] and start cooling the weapon down.</span>")
 	playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
 	while(recharging)
 		if(!do_after(user, 10, src))

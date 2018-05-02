@@ -19,7 +19,9 @@
 				prob(3);/obj/item/weapon/gun/energy/toxgun,
 				prob(4);/obj/item/weapon/gun/energy/taser,
 				prob(2);/obj/item/weapon/gun/energy/crossbow/largecrossbow,
-				prob(4);/obj/item/weapon/gun/energy/stunrevolver)
+				prob(4);/obj/item/weapon/gun/energy/stunrevolver,
+				prob(5);/obj/item/weapon/gun/energy/pistol,
+				prob(4);/obj/item/weapon/gun/energy/frontier)
 
 /obj/random/energy/sec
 	name = "Random Security Energy Weapon"
@@ -70,7 +72,12 @@
 				prob(2);/obj/item/weapon/gun/projectile/shotgun/semi,
 				prob(4);/obj/item/weapon/gun/projectile/shotgun/pump/rifle,
 				prob(3);/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever,
-				prob(2);/obj/item/weapon/gun/projectile/silenced)
+				prob(2);/obj/item/weapon/gun/projectile/silenced,
+				prob(1);/obj/item/weapon/gun/projectile/SVD,
+				prob(1);/obj/item/weapon/gun/projectile/lamia,
+				prob(2);/obj/item/weapon/gun/projectile/shotgun/pump/ksg,
+				prob(2);/obj/item/weapon/gun/projectile/fiveseven,
+				prob(3);/obj/item/weapon/gun/projectile/automatic/z8c)
 
 /obj/random/projectile/sec
 	name = "Random Security Projectile Weapon"
@@ -96,10 +103,13 @@
 				prob(3);/obj/item/weapon/gun/projectile/p92x/brown,
 				prob(3);/obj/item/weapon/gun/projectile/colt,
 				prob(2);/obj/item/weapon/gun/projectile/luger,
-				prob(2);/obj/item/weapon/gun/energy/gun,
+				prob(2);/obj/item/weapon/gun/energy/pistol,
 				prob(2);/obj/item/weapon/gun/projectile/pistol,
 				prob(1);/obj/item/weapon/gun/energy/retro,
-				prob(1);/obj/item/weapon/gun/projectile/luger/brown)
+				prob(1);/obj/item/weapon/gun/projectile/luger/brown,
+				prob(2);/obj/item/weapon/gun/projectile/revolver,
+				prob(1);/obj/item/weapon/gun/projectile/lamia,
+				prob(2);/obj/item/weapon/gun/projectile/fiveseven)
 
 /obj/random/handgun/sec
 	name = "Random Security Handgun"

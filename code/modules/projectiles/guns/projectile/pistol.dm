@@ -428,7 +428,7 @@
 	if(ammo_magazine)
 		icon_state = "[initial(icon_state)]"
 	else
-		icon_state = "[initial(icon_state)]-e"
+		icon_state = "[initial(icon_state)]-empty"
 
 	if(can_flashlight & gun_light)
 		var/mutable_appearance/flashlight_overlay = mutable_appearance(icon, light_state)

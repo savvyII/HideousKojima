@@ -88,13 +88,13 @@
 /obj/effect/landmark/mobcorpse/syndicatesoldier
 	name = "Mercenary"
 	corpseuniform = /obj/item/clothing/under/syndicate
-	corpsesuit = /obj/item/clothing/suit/armor/vest
+	corpsesuit = /obj/item/clothing/suit/armor/pcarrier/tan/combat
 	corpseshoes = /obj/item/clothing/shoes/boots/swat
 	corpsegloves = /obj/item/clothing/gloves/swat
 	corpseradio = /obj/item/device/radio/headset
-	corpsemask = /obj/item/clothing/mask/gas
-	corpsehelmet = /obj/item/clothing/head/helmet/swat
-	corpseback = /obj/item/weapon/storage/backpack
+	corpsemask = /obj/item/clothing/mask/balaclava
+	corpsehelmet = /obj/item/clothing/head/helmet/specops/fake
+	corpsebelt = /obj/item/weapon/storage/belt/security
 	corpseid = 1
 	corpseidjob = "Operative"
 	corpseidaccess = "Syndicate"
