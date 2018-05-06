@@ -24,7 +24,7 @@
 
 /datum/lore/codex/page/not_contraband
 	name = "Not Contraband"
-	data = "Here is a list of objects which are not actually contraband onboard NanoTrasen facilities in Vir, despite popular belief.\
+	data = "Here is a list of objects which are not actually contraband onboard NanoTrasen facilities in Eridani, despite popular belief.\
 	<ul>\
 	<li><b>Blades or other Equipment</b> which the possessor needs in order to fulfil their role onboard the facility, \
 	such as a kitchen knife for culinary personnel.</li>\
