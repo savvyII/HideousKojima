@@ -288,7 +288,7 @@ HALOGEN COUNTER	- Radcount on mobs
 
 /obj/item/device/healthanalyzer/phasic //reports all of the above, as well as name and quantity of nonmed reagents in stomach
 	name = "phasic health analyzer"
-	desc = "Possibly the most advanced health analyzer to ever have existed, utilising bluespace technology to determine almost everything worth knowing about a patient."
+	desc = "Possibly the most advanced health analyzer to ever have existed, utilising nanobots technology to determine almost everything worth knowing about a patient."
 	advscan = 3
 	origin_tech = list(TECH_MAGNET = 7, TECH_BIO = 8)
 	icon_state = "health3"

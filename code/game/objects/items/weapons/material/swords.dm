@@ -11,7 +11,7 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 /obj/item/weapon/material/sword/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	
+
 	if(default_parry_check(user, attacker, damage_source) && prob(50))
 		user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
 		playsound(user.loc, 'sound/weapons/punchmiss.ogg', 50, 1)
@@ -33,3 +33,27 @@
 	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 	visible_message(span("danger", "[user] is slitting [TU.his] stomach open with \the [src.name]! It looks like [TU.hes] trying to commit seppuku."), span("danger", "You slit your stomach open with \the [src.name]!"), span("danger", "You hear the sound of flesh tearing open.")) // gory, but it gets the point across
 	return(BRUTELOSS)
+
+// Imported from Bay
+
+/obj/item/weapon/material/sword/replica/officersword
+	name = "Gendarmerie officer's sword"
+	desc = "A polished sword issued to SSA Gendarmerie Commissaire."
+	icon_state = "officersword"
+	slot_flags = SLOT_BELT
+	applies_material_colour = FALSE
+
+/obj/item/weapon/material/sword/replica/officersword/marine
+	name = "Ceremonial officer sword"
+	desc = "A polished sword used for ceremonies."
+	icon_state = "marineofficersword"
+
+/obj/item/weapon/material/sword/replica/officersword/marineofficer
+	name = "marine officer sword"
+	desc = "A curved sword issued to SSA Marine officers."
+	icon_state = "marineofficersword"
+
+/obj/item/weapon/material/sword/replica/officersword/pettyofficer
+	name = "Ceremonial Sword"
+	desc = "A polished cutlass issued for ceremonies."
+	icon_state = "pettyofficersword"

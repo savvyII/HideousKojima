@@ -157,7 +157,7 @@
 	item_state = "syringe_0"
 	excavation_amount = 15
 	digspeed = 30
-	desc = "Advanced archaeological drill combining ultrasonic excitation and bluespace manipulation to provide extreme precision. The tip is adjustable from 1 to 30 cm."
+	desc = "Advanced archaeological drill combining ultrasonic excitation and gamma rays manipulation to provide extreme precision. The tip is adjustable from 1 to 30 cm. Do not point at something."
 	drill_sound = 'sound/weapons/thudswoosh.ogg'
 	drill_verb = "drilling"
 	force = 5

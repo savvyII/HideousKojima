@@ -422,7 +422,7 @@ other types of metals and chemistry for reagents).
 
 /datum/design/item/beaker/bluespace
 	name = TECH_BLUESPACE
-	desc = "A bluespace beaker, powered by experimental bluespace technology and Element Cuban combined with the Compound Pete. Can hold up to 300 units."
+	desc = "A quantic beaker. Its content may or may not be present here. Hold up to 300 units."
 	id = "bluespacebeaker"
 	req_tech = list(TECH_BLUESPACE = 2, TECH_MATERIAL = 6)
 	materials = list(DEFAULT_WALL_MATERIAL = 3000, "phoron" = 3000, "diamond" = 500)
@@ -808,7 +808,7 @@ other types of metals and chemistry for reagents).
 	sort_string = "VACBA"
 
 /datum/design/item/beacon
-	name = "Bluespace tracking beacon design"
+	name = "Quantic tracking beacon design"
 	id = "beacon"
 	req_tech = list(TECH_BLUESPACE = 1)
 	materials = list (DEFAULT_WALL_MATERIAL = 20, "glass" = 10)
@@ -835,7 +835,7 @@ other types of metals and chemistry for reagents).
 
 /datum/design/item/bag_holding
 	name = "'Bag of Holding', an infinite capacity bag prototype"
-	desc = "Using localized pockets of bluespace this bag prototype offers incredible storage capacity with the contents weighting nothing. It's a shame the bag itself is pretty heavy."
+	desc = "Using quantic mechanics, this bag prototype offers incredible storage capacity with the contents weighting nothing. It's a shame the bag itself is pretty heavy."
 	id = "bag_holding"
 	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 6)
 	materials = list("gold" = 3000, "diamond" = 1500, "uranium" = 250)

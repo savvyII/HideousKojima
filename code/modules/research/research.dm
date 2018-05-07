@@ -177,8 +177,8 @@ research holder datum.
 	id = TECH_POWER
 
 /datum/tech/bluespace
-	name = "'Blue-space' Research"
-	desc = "Research into the sub-reality known as 'blue-space'"
+	name = "Wormhole and Quantic Research"
+	desc = "Research into the field of Wormholes and Quantic mechanics.'"
 	id = TECH_BLUESPACE
 
 /datum/tech/biotech

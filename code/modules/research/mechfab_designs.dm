@@ -1,3 +1,21 @@
+/* Pyro's note: Adding categories:
+/datum/design/item/category_name
+	category = "Name"
+
+	Adding items to a category:
+
+/datum/design/item/category/item_name // You just want to replace 'category' by the item's category (on the fabricator), and item_name is up to you. Recommended that you put the same name as the item you're printing
+	name =  // Name shown on the fabricator
+	desc = // Description. Override  the item's default description. Leave blank if not needed.
+	id = "" // id name of your part, with no space (use _ instead). Unless you're trying to make a new mech or something that require multiple steps, it should be only present here.
+	req_tech = list() // Research needed to craft. remove req_tech if none. Check in research.dm for the research type
+	materials = list() // Material used. Be noted that while other materials follow their name ("diamond","glass", etc...) Steel is DEFAULT_WALL_MATERIAL. no ""
+	build_path = /obj/item/weapon/rig/industrial // The item you want the fabricator to spawn and craft.
+	time = // Time needed to craft items, in seconds, with default manipulators/lasers.
+	category = "RIG" // Shouldn't be needed, unless you want your item in another category for reasons.
+
+*/
+
 /datum/design/item/mechfab
 	build_type = MECHFAB
 	category = "Other"
@@ -484,3 +502,272 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 562, "glass" = 562)
 	build_path = /obj/item/device/flash/synthetic
 	category = "Misc"
+
+/* RIG and RIG Modules. */
+
+// RIG Firsts, because we're not savage.
+
+/datum/design/item/rig
+	build_type = MECHFAB
+	category = "RIG suits"
+
+/datum/design/item/rig/industrial
+	name = "Industrial RIG suit"
+	id = "rig_industrial"
+	req_tech = list(TECH_ENGINEERING = 5, TECH_COMBAT = 2, TECH_POWER = 5, TECH_BIO = 2, TECH_MATERIAL = 4)
+	time = 30
+	materials = list(DEFAULT_WALL_MATERIAL = 35000, "plasteel" = 10000, "glass" = 500, "plastic" = 2500, "silver" = 1000, "gold" = 500)
+	build_path = /obj/item/weapon/rig/industrial
+
+/datum/design/item/rig/eva
+	name = "Engineer RIG Suit"
+	id = "rig_eva"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_COMBAT = 1, TECH_POWER = 2, TECH_BIO = 1, TECH_MATERIAL = 3)
+	time = 30
+	materials = list(DEFAULT_WALL_MATERIAL = 25000, "plasteel" = 5000, "glass" = 600, "plastic" = 5500, "silver" = 500, "gold" = 250)
+	build_path = /obj/item/weapon/rig/eva
+
+/datum/design/item/rig/medical
+	name = "Medical RIG suit"
+	id = "rig_medical"
+	req_tech = list(TECH_ENGINEERING = 3, TECH_COMBAT = 2, TECH_POWER = 5, TECH_BIO = 4, TECH_MATERIAL = 4)
+	time = 30
+	materials = list(DEFAULT_WALL_MATERIAL = 30000, "plasteel" = 15000, "glass" = 1000, "plastic" = 15000, "silver" = 1500, "gold" = 500)
+	build_path = /obj/item/weapon/rig/medical
+
+/datum/design/item/rig/hazard
+	name = "Security RIG suit"
+	id = "rig_security"
+	req_tech = list(TECH_ENGINEERING = 6, TECH_COMBAT = 5, TECH_POWER = 5, TECH_BIO = 2, TECH_MATERIAL = 6)
+	time = 30
+	materials = list(DEFAULT_WALL_MATERIAL = 40000, "plasteel" = 20000, "glass" = 500, "silver" = 1300, "gold" = 700, "diamond" = 500)
+	build_path = /obj/item/weapon/rig/hazard
+
+
+// And now, for the less Family-friendly RIG suits
+
+/datum/design/item/rig/light
+	name = "Non-Standard RIG suit"
+	id = "rig_light"
+	req_tech = list(TECH_ENGINEERING = 5, TECH_COMBAT = 5, TECH_POWER = 5, TECH_BIO = 2, TECH_MATERIAL = 5, TECH_ILLEGAL = 2)
+	time = 30
+	materials = list(DEFAULT_WALL_MATERIAL = 70000, "plasteel" = 15000, "durasteel" = 2000, "glass" = 500, "silver" = 1300, "gold" = 700, "diamond" = 500)
+	build_path = /obj/item/weapon/rig/light
+
+/datum/design/item/rig/stealth
+	name = "Stealth Ops RIG suit"
+	id = "rig_stealth"
+	req_tech = list(TECH_ENGINEERING = 6, TECH_COMBAT = 6, TECH_POWER = 6, TECH_BIO = 2, TECH_MATERIAL = 5, TECH_ILLEGAL = 3)
+	time = 30
+	materials = list(DEFAULT_WALL_MATERIAL = 80000, "plasteel" = 20000, "durasteel" = 5000, "glass" = 500, "silver" = 1300, "gold" = 700, "diamond" = 500)
+	build_path = /obj/item/weapon/rig/light/stealth
+
+/datum/design/item/rig/combat
+	name = "Combat RIG suit"
+	id = "rig_combat"
+	req_tech = list(TECH_ENGINEERING = 6, TECH_COMBAT = 6, TECH_POWER = 6, TECH_BIO = 5, TECH_MATERIAL = 5, TECH_ILLEGAL = 5)
+	time = 30
+	materials = list(DEFAULT_WALL_MATERIAL = 120000, "plasteel" = 25000, "durasteel" = 10000, "glass" = 1500, "silver" = 3000, "gold" = 2000, "diamond" = 2500)
+	build_path = /obj/item/weapon/rig/combat
+
+// RIG modules
+
+/datum/design/item/rig_module
+	build_type = MECHFAB
+	category = "RIG equipments"
+
+// Utility Modules
+
+/datum/design/item/rig_module/plasmacutter
+	name = "Mounted Plasma Cutter"
+	id = "rig_plasmacutter"
+	req_tech = list(TECH_MATERIAL = 4, TECH_PHORON = 3, TECH_ENGINEERING = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 2500, "glass" = 1000, "gold" = 750, "phoron" = 750)
+	build_path = /obj/item/rig_module/device/plasmacutter
+
+/datum/design/item/rig_module/healthscanner
+	name = "Mounted Health Scanner"
+	id = "rig_healthscanner"
+	req_tech = list(TECH_MAGNET = 5, TECH_BIO = 6)
+	materials = list(DEFAULT_WALL_MATERIAL = 3000, "glass" = 1500, "silver" = 1000)
+	build_path = /obj/item/rig_module/device/healthscanner
+
+/datum/design/item/rig_module/drill
+	name = "Mounted Drill"
+	id = "rig_drill"
+	req_tech = list(TECH_MATERIAL = 6, TECH_POWER = 4, TECH_ENGINEERING = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 2000, "diamond" = 2000)
+	build_path = /obj/item/rig_module/device/drill
+
+/datum/design/itemrig_module/ano_scanner
+	name = "Mounted Anomaly Scanner"
+	id = "rig_elderscanner"
+	req_tech = list(TECH_BLUESPACE = 3, TECH_MAGNET = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 15000,"glass" = 5000)
+	build_path = /obj/item/rig_module/device/anomaly_scanner
+
+/datum/design/item/rig_module/ore_scanner
+	name = "Mounted Ore Scanner"
+	id = "rig_orescanner"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 10000,"glass" = 2000)
+	build_path = /obj/item/weapon/mining_scanner
+
+/datum/design/item/rig_module/rcd
+	name = "Mounted RCD"
+	id = "rig_rcd"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 3, TECH_ENGINEERING = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 15000)
+	build_path = /obj/item/rig_module/device/rcd
+
+/datum/design/item/rig_module/sprinter
+	name = "RIG Sprint Module"
+	id = "rig_sprinter"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 3, TECH_ENGINEERING = 3, TECH_COMBAT = 6)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 15000, "gold" = 2000, "diamond" = 500)
+	build_path = /obj/item/rig_module/sprinter
+
+/datum/design/item/rig_module/jetpack
+	name = "RIG Jetpack"
+	id = "rig_sprinter"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_COMBAT = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 15000, "silver" = 3000, "gold" = 2000, "diamond" = 1000)
+	build_path = /obj/item/rig_module/maneuvering_jets
+
+/datum/design/item/rig_module/chemicaldispenser
+	name = "RIG Pre-Filled Chemical Dispenser"
+	id = "rig_chemicaldispenser"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_COMBAT = 2, TECH_BIO = 6)
+	materials = list(DEFAULT_WALL_MATERIAL = 40000,"glass" = 30000, "silver" = 10000, "gold" = 6000, "diamond" = 4000, "phoron" = 10000)
+	build_path = /obj/item/rig_module/chem_dispenser
+
+// Computer and electronics module
+
+/datum/design/item/rig_module/aimodule
+	name = "RIG AI Module"
+	id = "rig_aimodule"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 4, TECH_ENGINEERING = 4, TECH_COMBAT = 2, TECH_DATA = 6)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 1000, "silver" = 4000, "gold" = 1000)
+	build_path = /obj/item/rig_module/ai_container
+
+/datum/design/item/rig_module/datajack
+	name = "RIG Datajack module"
+	id = "rig_datajack"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 4, TECH_ENGINEERING = 4, TECH_COMBAT = 2, TECH_ILLEGAL = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 1000, "silver" = 1000, "gold" = 500)
+	build_path = /obj/item/rig_module/datajack
+
+/datum/design/item/rig_module/electrowarfare
+	name = "RIG Electrowarfare Module"
+	id = "rig_electrowarfare"
+	req_tech = list(TECH_BLUESPACE = 4, TECH_MAGNET = 4, TECH_ENGINEERING = 4, TECH_COMBAT = 2, TECH_DATA = 6, TECH_ILLEGAL = 6)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000, "glass" = 1000, "silver" = 4000, "gold" = 2000, "phoron" = 6000, "diamond" = 1000)
+	build_path = /obj/item/rig_module/electrowarfare_suite
+
+/datum/design/item/rig_module/powersink
+	name = "RIG Powersink"
+	id = "rig_powersink"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 6, TECH_ENGINEERING = 7, TECH_COMBAT = 6, TECH_DATA = 6, TECH_ILLEGAL = 6)
+	materials = list(DEFAULT_WALL_MATERIAL = 100000,"glass" = 10000, "silver" = 40000, "gold" = 20000, "phoron" = 60000, "diamond" = 10000)
+	build_path = /obj/item/rig_module/power_sink
+
+// Mounted pewpew
+
+
+/datum/design/item/rig_module/flash
+	name = "RIG Flash"
+	id = "rig_flash"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_COMBAT = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "gold" = 2000)
+	build_path = /obj/item/device/flash
+
+/datum/design/item/rig_module/mountedcannon
+	name = "RIG Mounted Laser Cannon"
+	id = "rig_lasercannon"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 6, TECH_ENGINEERING = 7, TECH_COMBAT = 6)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 1000, "gold" = 6000, "phoron" = 5000, "diamond" = 1000)
+	build_path = /obj/item/rig_module/mounted
+
+/datum/design/item/rig_module/taser
+	name = "RIG Taser"
+	id = "rig_taser"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 3, TECH_ENGINEERING = 5, TECH_COMBAT = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 6000, "gold" = 6000)
+	build_path = /obj/item/rig_module/mounted/taser
+
+/datum/design/item/rig_module/egun
+	name = "RIG Energy Gun"
+	id = "rig_egun"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 5, TECH_ENGINEERING = 6, TECH_COMBAT = 5)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "gold" = 2000, "phoron" = 2000)
+	build_path = /obj/item/rig_module/mounted/egun
+
+// Vision modules
+
+/datum/design/item/rig_module/miningoptical
+	name = "RIG Meson&Material optical visor"
+	id = "rig_miningoptical"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "uranium" = 2000)
+	build_path = /obj/item/rig_module/vision/multi_mining
+
+/datum/design/item/rig_module/secdocoptical
+	name = "RIG Sechud & Medhud Package"
+	id = "rig_secdocoptical"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 5, TECH_BIO = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 10000, "gold" = 2000)
+	build_path = /obj/item/rig_module/vision/multi_emergency
+
+/datum/design/item/rig_module/meson
+	name = "RIG Meson scanner"
+	id = "rig_mopticalpack"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "uranium" = 2000)
+	build_path = /obj/item/rig_module/vision/meson
+
+/datum/design/item/rig_module/mopticalpack
+	name = "RIG Material Scanner"
+	id = "rig_mopticalpack"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "uranium" = 2000)
+	build_path = /obj/item/rig_module/vision/material
+
+/datum/design/item/rig_module/medhud
+	name = "RIG Medhud"
+	id = "rig_medhud"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 2, TECH_BIO = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "uranium" = 2000)
+	build_path = /obj/item/rig_module/vision/medhud
+
+/datum/design/item/rig_module/sedhud
+	name = "RIG Sechud"
+	id = "rig_sedhud"
+	req_tech = list(TECH_BLUESPACE = 2, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 2, TECH_BIO = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "uranium" = 2000)
+	build_path = /obj/item/rig_module/vision/sechud
+
+// illegalish vision module
+
+/datum/design/item/rig_module/mopticalpack
+	name = "RIG Multi Optical Package"
+	id = "rig_mopticalpack"
+	req_tech = list(TECH_BLUESPACE = 4, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 4, TECH_ILLEGAL = 6, TECH_BIO = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 10000, "gold" = 6000, "uranium" = 10000, "diamond" = 6000)
+	build_path = /obj/item/rig_module/vision/multi
+
+
+/datum/design/item/rig_module/thermal
+	name = "RIG Thermal optics"
+	id = "rig_thermal"
+	req_tech = list(TECH_BLUESPACE = 4, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 4, TECH_ILLEGAL = 2, TECH_BIO = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "gold" = 2000, "uranium" = 2000, "diamond" = 2000)
+	build_path = /obj/item/rig_module/vision/thermal
+
+/datum/design/item/rig_module/nvg
+	name = "RIG Night Vision"
+	id = "rig_nvg"
+	req_tech = list(TECH_BLUESPACE = 4, TECH_MAGNET = 5, TECH_ENGINEERING = 5, TECH_COMBAT = 4, TECH_ILLEGAL = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 30000,"glass" = 5000, "silver" = 4000, "gold" = 2000, "uranium" = 2000, "diamond" = 2000)
+	build_path = /obj/item/rig_module/vision/nvg
+
+
