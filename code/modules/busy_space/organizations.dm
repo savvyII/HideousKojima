@@ -41,7 +41,7 @@
 	if(autogenerate_destination_names) // Lets pad out the destination names.
 		var/i = rand(6, 10)
 		var/list/star_names = list(
-			"Sol", "Alpha Centauri", "Tau Ceti", "Zhu Que", "Oasis", "Vir", "Gavel", "Ganesha",
+			"Sol", "Alpha Centauri", "Tau Ceti", "Zhu Que", "Oasis", "Vir", "Gavel", "Ganesha", "Epsilon Eridani", "Alpha Eridani", "Beta Eridani",
 			"Saint Columbia", "Altair", "Sidhe", "New Ohio", "Parvati", "Mahi-Mahi", "Nyx", "New Seoul",
 			"Kess-Gendar", "Raphael", "Phact", "Altair", "El", "Eutopia", "Qerr'valis", "Qerrna-Lakirr", "Rarkajar", "Thoth", "Jahan's Post", "Kauq'xum", "Silk", "New Singapore", "Stove", "Viola", "Love", "Isavau's Gamble" )
 		var/list/destination_types = list("dockyard", "station", "vessel", "waystation", "telecommunications satellite", "spaceport", "distress beacon", "anomaly", "colony", "outpost")
@@ -103,11 +103,10 @@
 		)
 	// Note that the current station being used will be pruned from this list upon being instantiated
 	destination_names = list(
-		"NSS Exodus in Nyx",
-		"NCS Northern Star in Vir",
-		//"NLS Southern Cross in Vir",
+		"NSS Exodus in Beta Eridani",
+		"NTCC Helios",
 		"NAS Vir Central Command",
-		"a dockyard orbiting Sif",
+		"a dockyard orbiting Hronn",
 		"an asteroid orbiting Kara",
 		"an asteroid orbiting Rota",
 		"Vir Interstellar Spaceport"
@@ -157,7 +156,7 @@
 		"Tyr"
 		)
 	destination_names = list(
-		"a SolGov dockyard on Luna",
+		"a SSA Spaceport in Tau Ceti",
 		"a Fleet outpost in the Almach Rim",
 		"a Fleet outpost on the Moghes border"
 		)
@@ -373,6 +372,7 @@
 		"Preemptive Defensive Strike",
 		"This Ship Is Spiders",
 		"Legitimate Trade Vessel",
+		"Flying Flaming Aircraft Carrier",
 		"Please Don't Explode II",
 		"Get Off the Air"
 		)
@@ -398,37 +398,34 @@
 // Governments
 
 /datum/lore/organization/gov/sifgov
-	name = "Sif Governmental Authority"
-	short_name = "SifGov"
-	desc = "SifGov is the sole governing administration for the Vir system, based in New Reykjavik, Sif.  It is a representative \
-	democratic government, and a fully recognized member of the Solar Confederate Government.  Anyone operating inside of Vir must \
-	comply with SifGov's legislation and regulations."
+	name = "Epsilon Eridani Governmental Authority"
+	short_name = "EEGov"
+	desc = "EEGov is the sole governing administration for the Epsilon Eridani system, based in the Epsilon Eridani System, aboard the EOC 'Athena'.  It is a representative \
+	democratic government, and a fully recognized member of the Eridanus Trade Federation.  Anyone operating inside of Epsilon eridani must \
+	comply with EE's legislation and regulations."
 	history = "" // Todo like the rest of them
-	work = "governing body of Sif"
-	headquarters = "New Reykjavik, Sif"
+	work = "governing body of Hronn"
+	headquarters = "EOC 'Athena'"
 	motto = ""
 	autogenerate_destination_names = FALSE
 
 	ship_prefixes = list("SGA" = "hauling", "SGA" = "energy relay")
 	destination_names = list(
-						"New Reykjavik on Sif",
+						"EOC Athena",
 						"Radiance Energy Chain",
-						"a dockyard orbiting Sif",
+						"a dockyard orbiting Hronn",
 						"a telecommunications satellite",
-						"Vir Interstellar Spaceport"
+						"Epsilon Eridani Interstellar Spaceport"
 						)
 
 /datum/lore/organization/gov/solgov
-	name = "Solar Confederate Government"
-	short_name = "SolGov"
-	acronym = "SCG"
-	desc = "SolGov is a decentralized confederation of human governmental entities based on Luna, Sol, which defines top-level law for their member states.  \
-	Member states receive various benefits such as defensive pacts, trade agreements, social support and funding, and being able to participate \
-	in the Colonial Assembly.  The majority, but not all human territories are members of SolGov.  As such, SolGov is a major power and \
-	defacto represents humanity on the galactic stage."
-	history = "" // Todo
+	name = "Solar System Alliance"
+	short_name = "SSA"
+	acronym = "SSA"
+	desc = "The Largest human faction in the galaxy, the SSA Has been in charges of all human planets in the galaxy, until the Frontier Federation started their rebellion. .\
+	None the less, it remains the largest faction for human alike."
 	work = "governing polity of humanity's Confederation"
-	headquarters = "Luna"
+	headquarters = "Earth, Sol"
 	motto = "Nil Mortalibus Ardui Est" // Latin, because latin.  Says 'Nothing is too steep for mortals'.
 	autogenerate_destination_names = TRUE
 
@@ -441,31 +438,38 @@
 						"Titan"
 						)// autogen will add a lot of other places as well.
 
-/*
-// To be expanded upon later, once the military lore gets sorted out.
+
 
 // Military
 
 /datum/lore/organization/mil/sif_guard
-	name = "Sif Defense Force" // Todo: Get better name from lorepeople.
-	short_name = "SifGuard"
-	desc = ""
-	history = ""
-	work = "Sif Governmental Authority's military"
-	headquarters = "New Reykjavik, Sif"
-	motto = ""
-	autogenerate_destination_names = FALSE // Kinda weird if SifGuard goes to Nyx.
+	name = "PyroCorp" // Todo: Get better name from lorepeople.
+	short_name = "PC"
+	desc = "One of the largest Para-Military corporation in the galaxy, the Pyro-Vernand Arms Manufacturing Corporation, also know as PyroCorp, has made a \
+	name for themselves with their large productions of arms (and especially their shotguns), ships systems and weapons, military technologies and their large army of military Robots. \
+	The Corporation is, amazingly, only composed of Robots and IPCs, with the only human present being simply the descendant of the originals Chairman, with no \
+	real power over the Robots. Various sources claims they're a big allied of the Frontier Federation."
+	work = "Military Manufacturers"
+	headquarters = "Tau Ceti"
+	motto = "Glory to the Corp; Glory for Peace."
+	autogenerate_destination_names = TRUE
 
-	ship_prefixes = list("SGSC" = "military", "SGSC" = "patrol", "SGSC" = "rescue", "SGSC" = "emergency response") // Todo: Replace prefix with better one.
+	ship_prefixes = list("PCD" = "defense", "PCC" = "cargo freight", "PCT" = "troop transport", "PCB" = "battlecruiser", "PCH" = "artillery cruiser")
+	ship_names = list(
+		"Hellfire",
+		"Guardian",
+		"Flying Fortress",
+		"O'Neill, with two L's",
+		"Prometheus",
+		"Atlantis",
+		"De Gaulles",
+		"Vernichten",
+		"Fire Blown Out By Wind",
+		"FliegendesDingMitWaffen"
+		)
 	destination_names = list(
-						"a classified location in SolGov territory",
-						"Sif orbit",
-						"the rings of Kara",
-						"the rings of Rota",
-						"Firnir orbit",
-						"Tyr orbit",
-						"Magni orbit",
-						"a wreck in SifGov territory",
-						"a military outpost",
+						"PyroCorp main factory.",
+						"Hronn orbit",
+						"a classified Location",
+						"a military outpost"
 						)
-*/

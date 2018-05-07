@@ -10,7 +10,7 @@
 /obj/item/weapon/spell/apportation
 	name = "apportation"
 	icon_state = "apportation"
-	desc = "Allows you to reach through Bluespace with your hand, and grab something, bringing it to you instantly."
+	desc = "Allows you to reach through a sub-dimension with your hand, and grab something, bringing it to you instantly."
 	cast_methods = CAST_RANGED
 	aspect = ASPECT_TELE
 

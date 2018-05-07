@@ -100,8 +100,8 @@
 	icon_state = "adamantine slime extract"
 
 /obj/item/slime_extract/bluespace
-	name = "bluespace slime extract"
-	icon_state = "bluespace slime extract"
+	name = "quantic slime extract"
+	icon_state = "quantic slime extract"
 
 /obj/item/slime_extract/pyrite
 	name = "pyrite slime extract"

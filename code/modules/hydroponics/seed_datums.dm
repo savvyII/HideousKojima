@@ -205,8 +205,8 @@
 
 /datum/seed/tomato/blue/teleport
 	name = "bluespacetomato"
-	seed_name = "bluespace tomato"
-	display_name = "bluespace tomato plant"
+	seed_name = "quantic tomato"
+	display_name = "quantic tomato plant"
 	mutants = null
 	chems = list("nutriment" = list(1,20), "singulo" = list(10,5))
 
