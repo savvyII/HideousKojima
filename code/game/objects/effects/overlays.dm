@@ -36,7 +36,7 @@
 	icon_state = "coconuts"
 
 /obj/effect/overlay/bluespacify
-	name = "Hyperspace"
+	name = "Bluespace"
 	icon = 'icons/turf/space.dmi'
 	icon_state = "bluespacify"
 	plane = ABOVE_PLANE

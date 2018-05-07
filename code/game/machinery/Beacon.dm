@@ -1,8 +1,8 @@
 /obj/machinery/bluespace_beacon
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "floor_beaconf"
-	name = "Quantic Gigabeacon"
-	desc = "Use quantic mechanics to create a permanent tracking beacon."
+	name = "Bluespace Gigabeacon"
+	desc = "A device that draws power from bluespace and creates a permanent tracking beacon."
 	level = 1		// underfloor
 	layer = UNDER_JUNK_LAYER
 	anchored = 1

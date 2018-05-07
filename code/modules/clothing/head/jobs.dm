@@ -129,14 +129,14 @@
 	icon_state = "beret_purpleyellow"
 
 /obj/item/clothing/head/beret/centcom/officer
-	name = "CCIA Agent beret"
-	desc = "A dark blue beret adorned with a silver patch. Worn by CCIA Agents."
+	name = "officers beret"
+	desc = "A dark blue beret adorned with a silver patch. Worn by NanoTrasen Officials."
 	icon_state = "beret_centcom_officer"
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
 
 /obj/item/clothing/head/beret/centcom/captain
-	name = "CCIA Director beret"
-	desc = "A white beret adorned with a blue patch. Worn by CCIA Director."
+	name = "captains beret"
+	desc = "A white beret adorned with a blue patch. Worn by NanoTrasen command staff."
 	icon_state = "beret_centcom_captain"
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
 

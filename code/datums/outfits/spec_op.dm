@@ -37,22 +37,6 @@
 	id_slot = slot_wear_id
 	id_type = /obj/item/weapon/card/id/centcom/ERT
 
-/decl/hierarchy/outfit/ert/sec
-	name = "Spec ops - NTCC Helios Internal Sec"
-	uniform = /obj/item/clothing/under/ert
-	shoes = /obj/item/clothing/shoes/boots/swat
-	gloves = /obj/item/clothing/gloves/swat
-	l_ear = /obj/item/device/radio/headset/ert
-	belt = /obj/item/weapon/gun/energy/gun
-	glasses = /obj/item/clothing/glasses/sunglasses
-	back = /obj/item/weapon/storage/backpack/satchel
-	l_pocket = /obj/item/weapon/melee/telebaton
-	r_hand =  /obj/item/weapon/shield/riot/tele
-
-	id_slot = slot_wear_id
-	id_type = /obj/item/weapon/card/id/centcom/ERT
-
-
 /decl/hierarchy/outfit/death_command
 	name = "Spec ops - Death commando"
 

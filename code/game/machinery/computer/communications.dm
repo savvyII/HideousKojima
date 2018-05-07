@@ -428,7 +428,7 @@
 		return
 
 	if(!universe.OnShuttleCall(usr))
-		user << "<span class='notice'>Cannot establish a wormhole.</span>"
+		user << "<span class='notice'>Cannot establish a bluespace connection.</span>"
 		return
 
 	if(deathsquad.deployed)

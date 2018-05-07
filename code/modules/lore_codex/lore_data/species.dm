@@ -53,7 +53,7 @@
 	from cold, they thrive on their subarctic planet, where the only terran temperate areas spread across the equator and tropical belt. \
 	With their own share of bloody wars and great technological advances, the Tajaran are a proud kind. They fiercely believe they belong \
 	among the stars and consider themselves a rightful interstellar nation, even if the humans helped them to actually achieve superluminal \
-	speeds with FTL drives. Relatively new to the galactic stage, their contacts with other species are aloof, but friendly. \
+	speeds with Bluespace FTL drives. Relatively new to the galactic stage, their contacts with other species are aloof, but friendly. \
 	Among these bonds, Humans stand out as valued trade partners and maybe even a friend."
 
 /datum/lore/codex/page/diona/add_content()

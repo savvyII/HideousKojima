@@ -708,7 +708,7 @@
 // ********************
 
 /obj/item/slime_extract/bluespace
-	name = "quantic slime extract"
+	name = "bluespace slime extract"
 	icon_state = "bluespace slime extract"
 	description_info = "This extract creates slime crystals.  When injected with water, it creates five 'lesser' slime crystals, which allow for limited \
 	short ranged, random teleporting.  When injected with phoron, it creates one 'greater' slime crystal, which allows for a one time precise teleport to \

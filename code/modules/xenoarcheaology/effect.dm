@@ -85,7 +85,7 @@
 		if(EFFECT_ORGANIC)
 			. += "Organically reactive exotic particles"
 		if(EFFECT_BLUESPACE)
-			. += "Interdimensional phasing"
+			. += "Interdimensional/bluespace? phasing"
 		if(EFFECT_SYNTH)
 			. += "Atomic synthesis"
 		else

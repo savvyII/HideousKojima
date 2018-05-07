@@ -212,8 +212,8 @@
 	flags = OPENCONTAINER | NOREACT
 
 /obj/item/weapon/reagent_containers/glass/beaker/bluespace
-	name = "quantic beaker"
-	desc = "A quantic beaker. The liquid inside may or may not be present here."
+	name = "bluespace beaker"
+	desc = "A bluespace beaker, powered by experimental bluespace technology."
 	icon_state = "beakerbluespace"
 	matter = list("glass" = 5000)
 	volume = 300
