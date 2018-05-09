@@ -57,7 +57,7 @@
 			if("homosexuality")
 				B.name = "Guys Gone Wild"
 			if("science")
-				B.name = pick("Principle of Relativity", "Quantum Enigma: Physics Encounters Consciousness", "Programming the Universe", "Quantum Physics and Theology", "String Theory for Dummies", "How To: Build Your Own Warp Drive", "The Mysteries of Bluespace", "Playing God: Collector's Edition")
+				B.name = pick("Principle of Relativity", "Quantum Enigma: Physics Encounters Consciousness", "Programming the Universe", "Quantum Physics and Theology", "String Theory for Dummies", "How To: Build Your Own Warp Drive", "The Mysteries of the WARP", "Playing God: Collector's Edition")
 			if("capitalism")
 				B.name = "Wealth of Nations"
 			if("communism")

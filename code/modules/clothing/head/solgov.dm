@@ -11,8 +11,8 @@
 		)
 
 /obj/item/clothing/head/soft/sol/expedition
-	name = "\improper SifGuard cap"
-	desc = "It's a black ballcap bearing a Sif Defense Force crest."
+	name = "\improper EE Guard cap"
+	desc = "It's a black ballcap bearing an Epsilon Eridani Defense Force crest."
 	icon_state = "expeditionsoft"
 	item_state_slots = list(
 		slot_l_hand_str = "blacksoft",
@@ -114,40 +114,40 @@
 	body_parts_covered = 0
 
 /obj/item/clothing/head/dress/expedition
-	name = "\improper SifGuard dress cap"
-	desc = "A peaked grey dress uniform cap belonging to the Sif Defense Force."
+	name = "\improper Epsilon Eridani Guard dress cap"
+	desc = "A peaked grey dress uniform cap belonging to the Epsilon Eridani Defense Force."
 	icon_state = "greydresscap"
 
 /obj/item/clothing/head/dress/expedition/command
-	name = "\improper SifGuard command dress cap"
-	desc = "A peaked grey dress uniform cap belonging to the Sif Defense Force. This one is trimmed in gold."
+	name = "\improper Epsilon Eridani Guard command dress cap"
+	desc = "A peaked grey dress uniform cap belonging to the Epsilon Eridani Defense Force. This one is trimmed in gold."
 	icon_state = "greydresscap_com"
 
 /obj/item/clothing/head/dress/fleet
 	name = "fleet dress wheel cover"
-	desc = "A white dress uniform cover. This one has an SCG Fleet crest."
+	desc = "A white dress uniform cover. This one has an SSA Fleet crest."
 	icon_state = "whitepeakcap"
 
 /obj/item/clothing/head/dress/fleet/command
 	name = "fleet command dress wheel cover"
-	desc = "A white dress uniform cover. This one has a gold stripe and an SCG Fleet crest."
+	desc = "A white dress uniform cover. This one has a gold stripe and an SSA Fleet crest."
 	icon_state = "whitepeakcap_com"
 
 /obj/item/clothing/head/dress/marine
 	name = "marine dress wheel cover"
-	desc = "A white dress uniform cover with an SCG Marine Corps crest."
+	desc = "A white dress uniform cover with an SSA Marine Corps crest."
 	icon_state = "whitewheelcap"
 
 /obj/item/clothing/head/dress/marine/command
 	name = "marine officer's dress wheel cover"
-	desc = "A white dress uniform cover with an SCG Marine Corps crest and gold stripe."
+	desc = "A white dress uniform cover with an SSA Marine Corps crest and gold stripe."
 	icon_state = "whitewheelcap_com"
 
 //Berets
 
 /obj/item/clothing/head/beret/sol
 	name = "peacekeeper beret"
-	desc = "A beret in Solar Confederate Government colors. For peacekeepers that are more inclined towards style than safety."
+	desc = "A beret in Sol System Alliance colors. For peacekeepers that are more inclined towards style than safety."
 	icon_state = "beret_lightblue"
 
 /obj/item/clothing/head/beret/sol/gateway
@@ -176,61 +176,61 @@
 	icon_state = "beret_white"
 
 /obj/item/clothing/head/beret/sol/expedition
-	name = "\improper SifGuard beret"
-	desc = "A black beret belonging to the Sif Defense Force. For personnel that are more inclined towards style than safety."
+	name = "\improper Epsilon Eridani Guard beret"
+	desc = "A black beret belonging to the Epsilon Eridani Defense Force. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black"
 
 /obj/item/clothing/head/beret/sol/expedition/security
-	name = "\improper SifGuard security beret"
-	desc = "A Sif Defense Force beret with a security crest. For personnel that are more inclined towards style than safety."
+	name = "\improper Epsilon Eridani Guard security beret"
+	desc = "A Epsilon Eridani Defense Force beret with a security crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black_security"
 
 /obj/item/clothing/head/beret/sol/expedition/medical
-	name = "\improper SifGuard medical beret"
-	desc = "A Sif Defense Force beret with a medical crest. For personnel that are more inclined towards style than safety."
+	name = "\improper Epsilon Eridani Guard medical beret"
+	desc = "A Epsilon Eridani Defense Force beret with a medical crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black_medical"
 
 /obj/item/clothing/head/beret/sol/expedition/engineering
-	name = "\improper SifGuard engineering beret"
-	desc = "A Sif Defense Force beret with an engineering crest. For personnel that are more inclined towards style than safety."
+	name = "\improper Epsilon Eridani Guard engineering beret"
+	desc = "A Epsilon Eridani Defense Force beret with an engineering crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black_engineering"
 
 /obj/item/clothing/head/beret/sol/expedition/supply
-	name = "\improper SifGuard supply beret"
-	desc = "A Sif Defense Force beret with a supply crest. For personnel that are more inclined towards style than safety."
+	name = "\improper Epsilon Eridani Guard supply beret"
+	desc = "A Epsilon Eridani Defense Force beret with a supply crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black_supply"
 
 /obj/item/clothing/head/beret/sol/expedition/command
-	name = "\improper SifGuard command beret"
-	desc = "A Sif Defense Force beret with a command crest. For personnel that are more inclined towards style than safety."
+	name = "\improper Epsilon Eridani Guard command beret"
+	desc = "A Epsilon Eridani Defense Force beret with a command crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black_command"
 
 /obj/item/clothing/head/beret/sol/fleet
 	name = "fleet beret"
-	desc = "A navy blue beret belonging to the SCG Fleet. For personnel that are more inclined towards style than safety."
+	desc = "A navy blue beret belonging to the SSA Fleet. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy"
 
 /obj/item/clothing/head/beret/sol/fleet/security
 	name = "fleet security beret"
-	desc = "An SCG Fleet beret with a security crest. For personnel that are more inclined towards style than safety."
+	desc = "An SSA Fleet beret with a security crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_security"
 
 /obj/item/clothing/head/beret/sol/fleet/medical
 	name = "fleet medical beret"
-	desc = "An SCG Fleet beret with a medical crest. For personnel that are more inclined towards style than safety."
+	desc = "An SSA Fleet beret with a medical crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_medical"
 
 /obj/item/clothing/head/beret/sol/fleet/engineering
 	name = "fleet engineering beret"
-	desc = "An SCG Fleet with an engineering crest. For personnel that are more inclined towards style than safety."
+	desc = "An SSA Fleet with an engineering crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_engineering"
 
 /obj/item/clothing/head/beret/sol/fleet/supply
 	name = "fleet supply beret"
-	desc = "An SCG Fleet beret with a supply crest. For personnel that are more inclined towards style than safety."
+	desc = "An SSA Fleet beret with a supply crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_supply"
 
 /obj/item/clothing/head/beret/sol/fleet/command
 	name = "fleet command beret"
-	desc = "An SCG Fleet beret with a command crest. For personnel that are more inclined towards style than safety."
+	desc = "An SSA Fleet beret with a command crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_command"

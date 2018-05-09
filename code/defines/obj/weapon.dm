@@ -463,7 +463,7 @@
 
 /obj/item/weapon/stock_parts/micro_laser
 	name = "micro-laser"
-	desc = "A tiny laser used in certain devices."
+	desc = "A tiny laser used in certain devices. Do not use to distract Tajara."
 	icon_state = "micro_laser"
 	origin_tech = list(TECH_MAGNET = 1)
 	matter = list(DEFAULT_WALL_MATERIAL = 10,"glass" = 20)
@@ -503,7 +503,7 @@
 
 /obj/item/weapon/stock_parts/micro_laser/high
 	name = "high-power micro-laser"
-	desc = "A tiny laser used in certain devices."
+	desc = "A tiny laser used in certain devices. Really, Don't use to distract Tajara."
 	icon_state = "high_micro_laser"
 	origin_tech = list(TECH_MAGNET = 3)
 	rating = 2
@@ -546,7 +546,7 @@
 /obj/item/weapon/stock_parts/micro_laser/ultra
 	name = "ultra-high-power micro-laser"
 	icon_state = "ultra_high_micro_laser"
-	desc = "A tiny laser used in certain devices."
+	desc = "A tiny laser used in certain devices. Do not use to distract Tajara."
 	origin_tech = list(TECH_MAGNET = 5)
 	rating = 3
 	matter = list(DEFAULT_WALL_MATERIAL = 10,"glass" = 20)

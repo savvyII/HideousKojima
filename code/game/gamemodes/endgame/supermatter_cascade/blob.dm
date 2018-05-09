@@ -1,6 +1,6 @@
 // QUALITY COPYPASTA
 /turf/unsimulated/wall/supermatter
-	name = "Bluespace"
+	name = "Spatio-Temporal Failure"
 	desc = "THE END IS right now actually."
 
 	icon = 'icons/turf/space.dmi'

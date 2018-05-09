@@ -124,7 +124,7 @@
 
 /datum/technomancer/equipment/belt_of_holding
 	name = "Belt of Holding"
-	desc = "A belt with a literal pocket which opens to a localized pocket of 'Blue-Space', allowing for more storage.  \
+	desc = "A belt with a literal pocket which use quantic storage technology, allowing for more storage.  \
 	The nature of the pocket allows for storage of larger objects than what is typical for other belts, and in larger quanities.  \
 	It will also help keep your pants on."
 	cost = 50
