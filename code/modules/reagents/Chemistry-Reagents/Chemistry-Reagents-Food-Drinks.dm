@@ -1047,13 +1047,13 @@
 	adj_dizzy = -5
 	adj_drowsy = -3
 	adj_sleepy = -2
-	
+
 
 	glass_name = "Coffee Milkshake"
 	glass_desc = "An energizing coffee milkshake, perfect for hot days at work.."
 
 /datum/reagent/drink/milkshake/coffeeshake/overdose(var/mob/living/carbon/M, var/alien)
-	M.make_jittery(5) 
+	M.make_jittery(5)
 
 /datum/reagent/drink/rewriter
 	name = "Rewriter"
@@ -2244,13 +2244,13 @@
 /datum/reagent/ethanol/singulo
 	name = "Singulo"
 	id = "singulo"
-	description = "A blue-space beverage!"
+	description = "A cosmic beverage!"
 	taste_description = "concentrated matter"
 	color = "#2E6671"
 	strength = 10
 
 	glass_name = "Singulo"
-	glass_desc = "A blue-space beverage."
+	glass_desc = "A cosmic beverage."
 
 /datum/reagent/ethanol/snowwhite
 	name = "Snow White"

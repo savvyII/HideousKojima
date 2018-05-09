@@ -40,7 +40,7 @@
 
 /obj/item/weapon/storage/backpack/holding
 	name = "bag of holding"
-	desc = "A backpack that opens into a localized pocket of Blue Space."
+	desc = "A backpack that uses Quantum mechanics to store more things.."
 	origin_tech = list(TECH_BLUESPACE = 4)
 	icon_state = "holdingpack"
 	max_w_class = ITEMSIZE_LARGE
