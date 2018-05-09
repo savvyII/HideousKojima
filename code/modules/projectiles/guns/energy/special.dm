@@ -40,6 +40,7 @@
 /obj/item/weapon/gun/energy/frontier
 	name = "MK30-EW"
 	desc = "The NT-made Ward-Takahashi MK30-EW is an extraordinarily rugged laser weapon, built to last and requiring effectively no maintenance. Has unique capacitor cooling technology to allow for use away from civilization."
+	icon = 'icons/obj/gun_2.dmi'
 	icon_state = "phaser"
 	fire_sound = 'sound/weapons/phaser.ogg'
 	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_POWER = 4)

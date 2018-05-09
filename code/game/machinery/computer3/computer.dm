@@ -54,8 +54,9 @@
 	var/last_pic = 1.0
 
 	// Purely graphical effect
+/*
 	var/icon/kb							= null
-
+*/
 	// These are necessary in order to consolidate all computer types into one
 	var/datum/wires/wires				= null
 	var/powernet						= null
@@ -90,12 +91,12 @@
 		..()
 		spawn(2)
 			power_change()
-
+/*
 		if(show_keyboard)
 			var/kb_state = "kb[rand(1,15)]"
 			kb = image('icons/obj/computer3.dmi',icon_state=kb_state)
 			overlays += kb
-
+*/
 		if(!built)
 			if(!circuitb || !istype(circuitb))
 				circuitb = new(src)
@@ -417,19 +418,25 @@
 			return
 		if(program)
 			overlays = list(program.overlay)
+			/*
 			if(show_keyboard)
 				overlays += kb
+			*/
 			name = "[program.name] [initial(name)]"
 		else if(os)
 			overlays = list(os.overlay)
+			/*
 			if(show_keyboard)
 				overlays += kb
+			*/
 			name = initial(name)
 		else
 			var/global/image/generic = image('icons/obj/computer3.dmi',icon_state="osod") // orange screen of death
 			overlays = list(generic)
+			/*
 			if(show_keyboard)
 				overlays += kb
+			*/
 			name = initial(name) + " (orange screen of death)"
 
 	//Returns percentage of battery charge remaining. Returns -1 if no battery is installed.
