@@ -65,7 +65,6 @@
 
 /decl/hierarchy/outfit/job/security/police
 	name = OUTFIT_JOB_NAME("ICE Agent")
-	uniform = /obj/item/clothing/under/pants/classicjeans
 	l_ear = /obj/item/device/radio/headset/ice
 	uniform = /obj/item/clothing/under/utility/blue
 	l_pocket = /obj/item/clothing/accessory/badge/holo/police

@@ -40,8 +40,7 @@ What is the naming convention for planes or layers?
 
 */
 
-#define SPACE_PLANE     		-82	// Reserved for use in space/parallax
-#define PARALLAX_PLANE  		-80	// Reserved for use in space/parallax
+
 
 // OPENSPACE_PLANE reserves all planes between OPENSPACE_PLANE_START and OPENSPACE_PLANE_END inclusive
 #define OPENSPACE_PLANE 		-75 // /turf/simulated/open will use OPENSPACE_PLANE + z (Valid z's being 2 thru 17)
@@ -50,16 +49,17 @@ What is the naming convention for planes or layers?
 #define OVER_OPENSPACE_PLANE	-57
 
 // Turf Planes
-#define SPACE_PLANE				-43 // Space turfs themselves
-#define PLATING_PLANE			-44 // Plating
+#define SPACE_PLANE				-77 // Space turfs themselves
+#define PARALLAX_PLANE  		-76	// Reserved for use in space/parallax
+#define PLATING_PLANE			-45 // Plating
 	#define DISPOSAL_LAYER		2.1 // Under objects, even when planeswapped
 	#define PIPES_LAYER			2.2	// Under objects, even when planeswapped
 	#define WIRES_LAYER			2.3 // Under objects, even when planeswapped
 	#define ATMOS_LAYER			2.4 // Pipe-like atmos machinery that goes on the floor, like filters.
 	#define ABOVE_UTILITY		2.5 // Above stuff like pipes and wires
-#define TURF_PLANE				-45 // Turfs themselves, most flooring
+#define TURF_PLANE				-46 // Turfs themselves, most flooring
 	#define ABOVE_TURF_LAYER	2.1	// Snow and such
-#define DECAL_PLANE				-44 // Permanent decals
+#define DECAL_PLANE				-45 // Permanent decals
 #define DIRTY_PLANE				-43 // Nonpermanent decals
 #define BLOOD_PLANE				-42 // Blood is really dirty, but we can do special stuff if we separate it
 
@@ -74,10 +74,7 @@ What is the naming convention for planes or layers?
 	#define DOOR_CLOSED_LAYER		3.1	// Doors when closed
 	#define WINDOW_LAYER			3.2	// Windows
 	#define ON_WINDOW_LAYER			3.3 // Ontop of a window
-	#define SHOWER_OPEN_LAYER		3.4	// Showers when open
-	// Obj/Mob layer boundary
-	#define SHOWER_CLOSED_LAYER 	4.2	// Should be converted to plane swaps
-	
+
 // Mob planes
 #define MOB_PLANE				-25
 	#define BELOW_MOB_LAYER			3.9 // Should be converted to plane swaps
@@ -93,11 +90,11 @@ What is the naming convention for planes or layers?
 	//#define AREA_LAYER		1 //For easy recordkeeping; this is a byond define
 
 	//#define TURF_LAYER		2 //For easy recordkeeping; this is a byond define
-	
+
 	//#define OBJ_LAYER			3 //For easy recordkeeping; this is a byond define
-	
+
 	//#define MOB_LAYER			4 //For easy recordkeeping; this is a byond define
-	
+
 	//#define FLY_LAYER			5 //For easy recordkeeping; this is a byond define
 
 	#define HUD_LAYER				20	// Above lighting, but below obfuscation. For in-game HUD effects (whereas SCREEN_LAYER is for abstract/OOC things like inventory slots)
