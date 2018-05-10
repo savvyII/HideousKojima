@@ -3,15 +3,16 @@
 	name = "\proper space"
 	icon_state = "0"
 	dynamic_lighting = 0
-
 	temperature = T20C
 	thermal_conductivity = OPEN_HEAT_TRANSFER_COEFFICIENT
 	var/keep_sprite = 0
 //	heat_capacity = 700000 No.
 
 /turf/space/New()
-	if(!istype(src, /turf/space/transit) && !istype(src, /turf/space/cracked_asteroid))
+	/*if(!istype(src, /turf/space/transit) && !istype(src, /turf/space/cracked_asteroid))
 		icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
+	*/
+	icon_state = "blank"
 	update_starlight()
 	..()
 
