@@ -99,6 +99,7 @@
 	minimal_access = list(access_lawyer, access_sec_doors, access_heads)
 	minimal_player_age = 7
 	head_position = 1
+	whitelist_only = 1
 
 	outfit_type = /decl/hierarchy/outfit/job/security/internal_affairs_agent
 

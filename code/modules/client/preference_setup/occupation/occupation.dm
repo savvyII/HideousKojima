@@ -94,6 +94,9 @@
 		if(job.minimum_character_age && user.client && (user.client.prefs.age < job.minimum_character_age))
 			. += "<del>[rank]</del></td><td> \[MINIMUM CHARACTER AGE: [job.minimum_character_age]]</td></tr>"
 			continue
+		if(!is_job_whitelisted(user, rank))
+			. += "<del>[rank]</del></td><td><b> \[WHITELIST ONLY]</b></td></tr>"
+			continue
 		if((pref.job_civilian_low & ASSISTANT) && job.type != /datum/job/assistant)
 			. += "<font color=grey>[rank]</font></td><td></td></tr>"
 			continue
