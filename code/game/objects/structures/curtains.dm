@@ -2,15 +2,13 @@
 	name = "curtain"
 	icon = 'icons/obj/curtain.dmi'
 	icon_state = "closed"
-	plane = MOB_PLANE
-	layer = ABOVE_MOB_LAYER
+	layer = 4.2
 	opacity = 1
 	density = 0
 
 /obj/structure/curtain/open
 	icon_state = "open"
-	plane = OBJ_PLANE
-	layer = OBJ_LAYER
+	layer = 3.4
 	opacity = 0
 
 /obj/structure/curtain/bullet_act(obj/item/projectile/P, def_zone)
@@ -29,12 +27,10 @@
 	set_opacity(!opacity)
 	if(opacity)
 		icon_state = "closed"
-		plane = MOB_PLANE
-		layer = ABOVE_MOB_LAYER
+		layer = 4.2
 	else
 		icon_state = "open"
-		plane = OBJ_PLANE
-		layer = OBJ_LAYER
+		layer = 3.4
 
 /obj/structure/curtain/attackby(obj/item/P, mob/user)
 	if(istype(P, /obj/item/weapon/wirecutters))
