@@ -46,7 +46,7 @@
 /obj/item/weapon/material/sword/replica/officersword/marine
 	name = "Ceremonial officer sword"
 	desc = "A polished sword used for ceremonies."
-	icon_state = "marineofficersword"
+	icon_state = "marinesword"
 
 /obj/item/weapon/material/sword/replica/officersword/marineofficer
 	name = "marine officer sword"
