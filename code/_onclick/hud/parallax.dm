@@ -3,7 +3,7 @@
 	mouse_opacity = 0
 	blend_mode = BLEND_MULTIPLY
 	plane = PARALLAX_PLANE
-	invisibility = 101
+	//invisibility = 101
 	anchored = 1
 	var/mob/owner
 	var/image/image
