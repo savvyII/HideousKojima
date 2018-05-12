@@ -414,7 +414,7 @@
 
 /obj/item/weapon/gun/projectile/fiveseven
 	name = "KPM FN-57"
-	desc = "Another classic retooled and redone by Kusanagi Precision machinery. Commonly seen in use with major police forces and comes with a tactical light installed. Uses 5.7x28mm rounds."
+	desc = "Another classic retooled and redone by Kusanagi Precision Machinery. Commonly seen in use with major police forces and comes with a tactical light installed. Uses 5.7x28mm rounds."
 	icon_state = "fiveseven"
 	caliber = "5.7x28mm"
 	load_method = MAGAZINE

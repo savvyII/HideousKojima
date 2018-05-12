@@ -44,19 +44,19 @@
 	unsuitable_atoms_damage = 15
 
 	speak_chance = 1
-	speak = list("Fuckin' NT, man.",
-				"When are we gonna get out of this chicken-shit outfit?",
-				"Wish I had better equipment...",
-				"I knew I should have been a line chef...",
-				"Fuckin' helmet keeps fogging up.",
-				"Anyone else smell that?")
+	speak = list("What about command? They just left us!",
+				"Well, what do we have here?",
+				"Alright it's nothing...",
+				"First we got NT then we got the god damn explorers...",
+				"Like in the movie, 'I have a bad feeling about this'.",
+				"Nice...")
 	emote_hear = list("sniffs","coughs","taps his foot")
 	emote_see = list("looks around","checks his equipment")
 	say_understood = list()
 	say_cannot = list()
 	say_maybe_target = list("What's that?","Is someone there?","Is that...?","Hmm?")
-	say_got_target = list("ENGAGING!!!","CONTACT!!!","TARGET SPOTTED!","FOUND ONE!")
-	reactions = list("Hey guys, you ready?" = "Fuck yeah!")
+	say_got_target = list("BASTARDS! I'LL KILL YOU ALL!","IS THIS YOUR WARFARE? YOU SHOULD TRY BETTER!","SON OF A-!","COME OUT YOU COWARDS!")
+	reactions = list("Nice work, bitch!" = "Fuck yeah!")
 
 	var/corpse = /obj/effect/landmark/mobcorpse/syndicatesoldier
 

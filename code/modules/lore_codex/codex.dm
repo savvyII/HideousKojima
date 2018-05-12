@@ -18,15 +18,15 @@
 	tree.display(user)
 
 /obj/item/weapon/book/codex/lore/vir
-	name = "The Traveler's Guide to Human Space: Vir Edition"
-	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Vir, human or not.   It also \
+	name = "The Traveler's Guide to Human Space: Eridani Edition"
+	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Eridani, human or not.   It also \
 	has the words 'Don't Panic' in small, friendly letters on the cover."
 	icon_state = "codex"
 	root_type = /datum/lore/codex/category/main_vir_lore
 
 /obj/item/weapon/book/codex/lore/news
 	name = "Daedalus Pocket Newscaster"
-	desc = "A regularly-updating compendium of articles on current events. Essential for new arrivals in the Vir system and anyone interested in politics."
+	desc = "A regularly-updating compendium of articles on current events. Essential for new arrivals in the Eridani system and anyone interested in politics."
 	icon_state = "newscodex"
 	w_class = ITEMSIZE_SMALL
 	root_type = /datum/lore/codex/category/main_news

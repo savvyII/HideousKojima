@@ -25,6 +25,7 @@
 	charge_cost = 480
 	projectile_type = /obj/item/projectile/ion/pistol
 
+/*
 /obj/item/weapon/gun/energy/phasegun
 	name = "phase pistol"
 	desc = "The NT Mk26 EW Apollo is an energy handgun, specifically designed for use against wildlife."
@@ -33,6 +34,57 @@
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	charge_cost = 300
 	projectile_type = /obj/item/projectile/energy/phase
+*/
+
+//Expedition pistol
+/obj/item/weapon/gun/energy/frontier
+	name = "MK30-EW"
+	desc = "The NT-made Ward-Takahashi MK30-EW is an extraordinarily rugged laser weapon, built to last and requiring effectively no maintenance. Has unique capacitor cooling technology to allow for use away from civilization."
+	icon = 'icons/obj/gun_2.dmi'
+	icon_state = "phaser"
+	fire_sound = 'sound/weapons/phaser.ogg'
+	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_POWER = 4)
+	battery_lock = 1
+	unacidable = 1
+
+	var/recharging = 0
+
+	projectile_type = /obj/item/projectile/beam
+	firemodes = list(
+		list(mode_name="normal", fire_delay=12, projectile_type=/obj/item/projectile/beam, charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser, charge_cost = 60),
+		)
+
+/obj/item/weapon/gun/energy/frontier/unload_ammo(var/mob/user)
+	if(recharging)
+		return
+	recharging = 1
+	update_icon()
+	user.visible_message("<span class='notice'>[user] hits the side of the [src] and cools the weapon down.</span>", \
+						"<span class='notice'>You hit the side of the [src] and start cooling the weapon down.</span>")
+	playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
+	while(recharging)
+		if(!do_after(user, 10, src))
+			break
+		playsound(get_turf(src),'sound/machines/hiss.ogg',25,1)
+		if(power_supply.give(60) < 60)
+			break
+
+	recharging = 0
+	update_icon()
+
+/obj/item/weapon/gun/energy/frontier/update_icon()
+	if(recharging)
+		icon_state = "[initial(icon_state)]_charge"
+		update_held_icon()
+		return
+	..()
+
+/obj/item/weapon/gun/energy/frontier/emp_act(severity)
+	return ..(severity+2)
+
+/obj/item/weapon/gun/energy/frontier/ex_act() //|rugged|
+	return
 
 /obj/item/weapon/gun/energy/decloner
 	name = "biological demolecularisor"

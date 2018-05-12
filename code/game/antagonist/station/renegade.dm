@@ -50,7 +50,7 @@ var/datum/antagonist/renegade/renegades
 		/obj/item/weapon/gun/projectile/derringer,
 		/obj/item/weapon/gun/projectile/shotgun/pump,
 		/obj/item/weapon/gun/projectile/shotgun/pump/rifle,
-		/obj/item/weapon/gun/projectile/shotgun/pump/combat,
+		/obj/item/weapon/gun/projectile/shotgun/semi,
 		/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
 		/obj/item/weapon/gun/projectile/revolver/judge,
 		/obj/item/weapon/gun/projectile/revolver/lemat,

@@ -10,7 +10,7 @@
 
 	firemodes = list(
 		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun/med, modifystate="energystun", charge_cost = 240),
-		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam, modifystate="energykill", charge_cost = 480),
+		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam, modifystate="energykill", charge_cost = 240),
 		)
 
 /obj/item/weapon/gun/energy/gun/mounted
@@ -79,8 +79,8 @@
 	modifystate = "epistolstun"
 
 	firemodes = list(
-		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun/weak, modifystate="epistolstun", fire_sound='sound/weapons/Taser.ogg', charge_cost = 240),
-		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam/pistol, modifystate="epistolkill", fire_sound='sound/weapons/Laser.ogg', charge_cost = 240)
+		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun/weak, modifystate="epistolstun", fire_sound='sound/weapons/Taser.ogg', charge_cost = 480),
+		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam/pistol, modifystate="epistolkill", fire_sound='sound/weapons/Laser.ogg', charge_cost = 480)
 		)
 
 /obj/item/weapon/gun/energy/rifle

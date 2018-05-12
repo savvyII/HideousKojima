@@ -42,6 +42,7 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 5
 	outfit_type = /decl/hierarchy/outfit/job/security/warden
+	alt_titles = list("Brig Officer")
 
 /*
 /datum/job/detective
@@ -79,7 +80,7 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
-	alt_titles = list("Junior Officer")
+	alt_titles = list("Probationary Officer", "Senior Officer")
 
 //var/global/lawyer = 0//Checks for another lawyer //This changed clothes on 2nd lawyer, both IA get the same dreds.
 /datum/job/lawyer
@@ -97,6 +98,8 @@
 	access = list(access_lawyer, access_sec_doors, access_maint_tunnels, access_heads)
 	minimal_access = list(access_lawyer, access_sec_doors, access_heads)
 	minimal_player_age = 7
+	head_position = 1
+	whitelist_only = 1
 
 	outfit_type = /decl/hierarchy/outfit/job/security/internal_affairs_agent
 
@@ -119,7 +122,15 @@
 	selection_color = "#601C1C"
 	idtype = /obj/item/weapon/card/id/security/officer
 	economic_modifier = 8
-	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks, access_forensics_lockers)
-	minimal_access = list(access_security, access_eva, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_external_airlocks)
-	minimal_player_age = 7
+	access = list(access_security, access_eva, access_sec_doors, access_brig, access_forensics_lockers,
+			            access_morgue, access_maint_tunnels, access_all_personal_lockers,
+			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+			            access_heads, access_RC_announce, access_gateway, access_external_airlocks)
+	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_forensics_lockers,
+			            access_morgue, access_maint_tunnels, access_all_personal_lockers,
+			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+			            access_heads, access_RC_announce, access_gateway, access_external_airlocks)
+	minimal_player_age = 24
 	outfit_type = /decl/hierarchy/outfit/job/security/police
+	head_position = 1
+	whitelist_only = 1

@@ -27,6 +27,18 @@ obj/machinery/recharger
 	if(istype(user,/mob/living/silicon))
 		return
 
+	if (istype(G, /obj/item/weapon/gripper))//Code for allowing cyborgs to use rechargers
+		var/obj/item/weapon/gripper/Gri = G
+		if (charging)//If there's something in the charger
+			if (Gri.grip_item(charging, user))//we attempt to grab it
+				charging = null
+				update_icon()
+			else
+				user << "<span class='danger'>Your gripper cannot hold \the [charging].</span>"
+
+	if(!dropsafety(G))
+		return
+
 	var/allowed = 0
 	for (var/allowed_type in allowed_devices)
 		if(istype(G, allowed_type)) allowed = 1

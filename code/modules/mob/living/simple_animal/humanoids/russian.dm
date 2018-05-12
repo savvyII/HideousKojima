@@ -46,6 +46,21 @@
 
 	var/corpse = /obj/effect/landmark/mobcorpse/russian
 
+	speak_chance = 1
+	speak = list("I khuy moy tantseval chechotku, vbivaya Yan' v nogi in', ostyn', ostyn'.",
+				"A, bashka bolit.. Bukhat' nado men'she...",
+				"Stromnoye mestechko...",
+				"Shcha k barygam, a potom - po babam...",
+				"Khot' i mne tut pizdets kak ne nravitsya, no vykhoda u nas net.",
+				"Kak zhe zayebalo vso...")
+	emote_hear = list("sniffs","coughs","taps his foot")
+	emote_see = list("looks around","checks his equipment")
+	say_understood = list()
+	say_cannot = list()
+	say_maybe_target = list()
+	say_got_target = list("YA VAS UYOBKOV DAVIL, DAVLYU I DAVIT' BUDU! ","DAVAY MOCHI IKH!","VOT PADLA!","NU DAVAY, DAVAY!")
+	reactions = list()
+
 /mob/living/simple_animal/hostile/russian/ranged
 	icon_state = "russianranged"
 	icon_living = "russianranged"

@@ -59,7 +59,7 @@
 	num_contained = 1
 	contains = list(
 			list( //the operator,
-					/obj/item/weapon/gun/projectile/shotgun/pump/combat,
+					/obj/item/weapon/gun/projectile/shotgun/semi,
 					/obj/item/clothing/suit/armor/pcarrier/tan/combat,
 					/obj/item/clothing/glasses/night,
 					/obj/item/weapon/storage/box/anti_photons,

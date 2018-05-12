@@ -107,7 +107,7 @@ AngleToHue(hue)
     Converts an angle to a hue in the valid range.
 RotateHue(hsv, angle)
     Takes an HSV or HSVA value and rotates the hue forward through red, green, and blue by an angle from 0 to 360.
-    (Rotating red by 60° produces yellow.) The result is another HSV or HSVA color with the same saturation and value
+    (Rotating red by 60? produces yellow.) The result is another HSV or HSVA color with the same saturation and value
     as the original, but a different hue.
 GrayScale(rgb)
     Takes an RGB or RGBA color and converts it to grayscale. Returns an RGB or RGBA string.
@@ -677,7 +677,7 @@ The _flatIcons list is a cache for generated icon files.
 
 	var/curdir
 	var/base_icon_dir	//We'll use this to get the icon state to display if not null BUT NOT pass it to overlays as the dir we have
-	
+
 	//These should use the parent's direction (most likely)
 	if(!A.dir || A.dir == SOUTH)
 		curdir = defdir
@@ -686,7 +686,7 @@ The _flatIcons list is a cache for generated icon files.
 
 	//Let's check if the icon actually contains any diagonals, just skip if it's south to save (lot of) time
 	if(curdir != SOUTH)
-		var/icon/test_icon 
+		var/icon/test_icon
 		var/directionals_exist = FALSE
 		var/list/dirs_to_check = cardinal - SOUTH
 		outer:

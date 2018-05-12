@@ -59,6 +59,8 @@ var/global/datum/controller/occupations/job_master
 				return 0
 			if(!job.player_old_enough(player.client))
 				return 0
+			if(!is_job_whitelisted(player, rank))
+				return 0
 
 			var/position_limit = job.total_positions
 			if(!latejoin)
@@ -93,6 +95,9 @@ var/global/datum/controller/occupations/job_master
 			if(job.minimum_character_age && (player.client.prefs.age < job.minimum_character_age))
 				Debug("FOC character not old enough, Player: [player]")
 				continue
+			if(!is_job_whitelisted(player, job.title))
+				Debug("FOC is_job_whitelisted failed, Player: [player]")
+				continue
 			if(flag && (!player.client.prefs.be_special & flag))
 				Debug("FOC flag failed, Player: [player], Flag: [flag], ")
 				continue
@@ -122,6 +127,10 @@ var/global/datum/controller/occupations/job_master
 
 			if(!job.player_old_enough(player.client))
 				Debug("GRJ player not old enough, Player: [player]")
+				continue
+
+			if(!is_job_whitelisted(player, job.title))
+				Debug("GRJ player not whitelisted for this job, Player: [player], Job: [job.title]")
 				continue
 
 			if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)

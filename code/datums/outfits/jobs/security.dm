@@ -65,11 +65,10 @@
 
 /decl/hierarchy/outfit/job/security/police
 	name = OUTFIT_JOB_NAME("ICE Agent")
-	uniform = /obj/item/clothing/under/pants/classicjeans
 	l_ear = /obj/item/device/radio/headset/ice
+	uniform = /obj/item/clothing/under/utility/blue
 	l_pocket = /obj/item/clothing/accessory/badge/holo/police
 	r_pocket = /obj/item/ammo_magazine/m57
-	satchel_one = /obj/item/weapon/storage/backpack/satchel/norm
 	id_type = /obj/item/weapon/card/id/security/ice
 	pda_type = /obj/item/device/pda/security
 	backpack_contents = list(/obj/item/weapon/gun/projectile/fiveseven = 1, /obj/item/weapon/handcuffs = 1)

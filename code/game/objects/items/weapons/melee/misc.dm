@@ -88,3 +88,4 @@
 	new_voice.real_name = "cursed sword"
 	voice_mobs.Add(new_voice)
 	listening_objects |= src
+

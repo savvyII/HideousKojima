@@ -41,13 +41,15 @@
 		usr << "You can see \a [cooking_obj] inside."
 
 /obj/machinery/cooker/attackby(var/obj/item/I, var/mob/user)
-
 	if(!cook_type || (stat & (NOPOWER|BROKEN)))
 		user << "<span class='warning'>\The [src] is not working.</span>"
 		return
 
 	if(cooking)
 		user << "<span class='warning'>\The [src] is running!</span>"
+		return
+
+	if(!dropsafety(I))
 		return
 
 	if(default_unfasten_wrench(user, I, 20))

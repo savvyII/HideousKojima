@@ -42,6 +42,7 @@
 
 	update_icon()
 
+/*
 /obj/item/weapon/gun/projectile/shotgun/pump/combat
 	name = "KS-40"
 	desc = "Built for close quarters combat, the Hephaestus Industries KS-40 is widely regarded as a weapon of choice for repelling boarders. Uses 12g rounds."
@@ -51,9 +52,9 @@
 	max_shells = 7 //match the ammo box capacity, also it can hold a round in the chamber anyways, for a total of 8.
 	ammo_type = /obj/item/ammo_casing/a12g
 	load_method = SINGLE_CASING|SPEEDLOADER
+*/
 
-
-/obj/item/weapon/gun/projectile/shotgun/pump/combat/ksg
+/obj/item/weapon/gun/projectile/shotgun/pump/ksg
 	name = "KSG"
 	desc = "A fine-tuned PyroCorp-manufactured KSG, with room for fourteen shells, you'll be sweeping all of the station hallways! Chambered in 12 gauge."
 	icon_state = "ksg"
@@ -127,3 +128,24 @@
 	ammo_type = /obj/item/ammo_casing/a12g/pellet
 	w_class = ITEMSIZE_NORMAL
 	force = 5
+
+//--Semi Autos--//
+/obj/item/weapon/gun/projectile/shotgun/semi
+	name = "KS-40"
+	desc = "Built for close quarters combat, the Hephaestus Industries KS-40 is widely regarded as a weapon of choice for repelling boarders. Uses 12g rounds."
+	icon_state = "cshotgun"
+	item_state = "cshotgun"
+	max_shells = 8
+	w_class = ITEMSIZE_LARGE
+	force = 10
+	flags =  CONDUCT
+	slot_flags = SLOT_BACK
+	caliber = "12g"
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	load_method = SINGLE_CASING|SPEEDLOADER
+	ammo_type = /obj/item/ammo_casing/a12g
+	projectile_type = /obj/item/projectile/bullet/shotgun
+	fire_sound = 'sound/weapons/shotgun.ogg'
+
+/obj/item/weapon/gun/projectile/shotgun/semi/unload_ammo(user, allow_dump)
+	..(user, allow_dump=0)
