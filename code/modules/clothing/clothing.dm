@@ -23,6 +23,7 @@
 	var/list/sprite_sheets_refit = null
 	var/ear_protection = 0
 	var/blood_sprite_state
+//	var/cloth_type = /obj/item/stack/material/cloth
 
 //Updates the icons of the mob wearing the clothing item, if any.
 /obj/item/clothing/proc/update_clothing_icon()
@@ -834,3 +835,28 @@
 /obj/item/clothing/under/rank/New()
 	sensor_mode = pick(0,1,2,3)
 	..()
+
+//Cloth stuff, will come back to it later -S.B.
+/*
+/obj/item/clothing/under/attackby(var/obj/item/W, var/mob/user)
+	if(!istype(W) || W.force <= 0)
+		return ..()
+	if(W.sharp && W.edge)
+		var/time = (3 SECONDS / max(W.force / 10, 1)) * W.toolspeed
+		user.setClickCooldown(time)
+		if(do_after(user, time, src) && use(1))
+			to_chat(user, "<span class='notice'>You cut up some clothing into sheets.</span>")
+			playsound(get_turf(src), 'sound/items/Wirecutter.ogg', 50, 1)
+			var/obj/item/stack/material/cloth/existing_cloth = null
+			for(var/obj/item/stack/material/cloth/M in user.loc)
+				if(M.material.name == src.material.name)
+					existing_wood = M
+					break
+
+			var/obj/item/stack/material/cloth/new_cloth = new cloth_type(user.loc)
+			new_cloth.amount = rand(2,5)
+			if(existing_cloth && new_cloth.transfer_to(existing_cloth))
+				to_chat(user, "<span class='notice'>You add the newly-formed cloth sheets to the stack. It now contains [existing_cloth.amount] sheets.</span>")
+	else
+		return ..()
+*/

@@ -468,8 +468,8 @@
 		"FliegendesDingMitWaffen"
 		)
 	destination_names = list(
-						"PyroCorp main factory.",
+						"PyroCorp main factory",
 						"Hronn orbit",
-						"a classified Location",
+						"a classified location",
 						"a military outpost"
 						)
