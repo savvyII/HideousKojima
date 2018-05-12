@@ -122,8 +122,14 @@
 	selection_color = "#601C1C"
 	idtype = /obj/item/weapon/card/id/security/officer
 	economic_modifier = 8
-	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks, access_forensics_lockers, access_heads)
-	minimal_access = list(access_security, access_eva, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_external_airlocks, access_heads)
+	access = list(access_security, access_eva, access_sec_doors, access_brig, access_forensics_lockers,
+			            access_morgue, access_maint_tunnels, access_all_personal_lockers,
+			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+			            access_heads, access_RC_announce, access_gateway, access_external_airlocks)
+	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_forensics_lockers,
+			            access_morgue, access_maint_tunnels, access_all_personal_lockers,
+			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+			            access_heads, access_RC_announce, access_gateway, access_external_airlocks)
 	minimal_player_age = 24
 	outfit_type = /decl/hierarchy/outfit/job/security/police
 	head_position = 1
