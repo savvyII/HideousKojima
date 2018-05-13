@@ -90,6 +90,10 @@
 		name = "Long Hair"
 		icon_state = "hair_vlong"
 
+	longeralt2
+		name = "Long Hair Alt"
+		icon_state = "hair_longeralt2"
+
 	longest
 		name = "Very Long Hair"
 		icon_state = "hair_longest"
@@ -133,6 +137,10 @@
 	ponytail6
 		name = "Ponytail 6"
 		icon_state = "hair_ponytail6"
+
+	ponytail7
+		name = "Ponytail 7"
+		icon_state = "hair_ponytail7"
 
 	fringetail
 		name = "Fringetail"
@@ -374,6 +382,10 @@
 		name = "Hime Cut"
 		icon_state = "hair_himecut"
 
+	himecut_alt
+		name = "Hime Cut Alt"
+		icon_state = "hair_himecut_alt"
+
 	shorthime
 		name = "Short Hime Cut"
 		icon_state = "hair_shorthime"
@@ -503,12 +515,32 @@
 		icon_state = "hair_halfshaved"
 
 	bun
-		name = "Casual Bun"
+		name = "Bun"
 		icon_state = "hair_bun"
+
+	buncasual
+		name = "Casual Bun"
+		icon_state = "hair_bun2"
 
 	doublebun
 		name = "Double-Bun"
 		icon_state = "hair_doublebun"
+
+	bangshuman
+		name = "Bangs"
+		icon_state = "hair_hbangs"
+
+	bangshumanalt
+		name = "Bangs Short"
+		icon_state = "hair_hbangs_alt"
+
+	shortbangs
+		name = "Short Bangs"
+		icon_state = "hair_shortbangs"
+
+	sleeze
+		name = "Sleeze"
+		icon_state = "hair_sleeze"
 
 	oxton
 		name = "Oxton"
